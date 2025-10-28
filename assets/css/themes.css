@@ -755,3 +755,72 @@
     max-width: 900px;
     margin: 0 auto;
 }
+
+
+/* Welcome Section - Ultra Responsive */
+.welcome-section {
+    background-color: var(--color-white);
+    padding: var(--space-xl) 0;
+}
+
+.welcome-section .content-grid {
+    display: grid;
+    gap: var(--space-xl);
+    grid-template-columns: 1fr;
+    align-items: start;
+}
+
+.welcome-section .content-text {
+    width: 100%;
+    max-width: 100%;
+    overflow: hidden;
+}
+
+.welcome-section .content-image {
+    width: 100%;
+    max-width: 100%;
+    overflow: hidden;
+    border-radius: var(--radius-md);
+}
+
+.welcome-section .content-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: var(--radius-md);
+    object-fit: cover;
+    max-height: 300px;
+}
+
+/* Tablet and above */
+@media (min-width: 768px) {
+    .welcome-section {
+        padding: var(--space-2xl) 0;
+    }
+    
+    .welcome-section .content-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: var(--space-2xl);
+        align-items: center;
+    }
+    
+    .welcome-section .content-image img {
+        max-height: 400px;
+    }
+}
+
+/* Desktop */
+@media (min-width: 1024px) {
+    .welcome-section {
+        padding: var(--space-3xl) 0;
+    }
+    
+    .welcome-section .content-grid {
+        grid-template-columns: 1.2fr 0.8fr;
+        gap: var(--space-3xl);
+    }
+    
+    .welcome-section .content-image img {
+        max-height: 500px;
+    }
+}
