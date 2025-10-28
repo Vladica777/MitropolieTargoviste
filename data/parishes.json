@@ -1,0 +1,38 @@
+[
+  {
+    "name": "Catedrala Mitropoliei",
+    "protopopiat": "Târgoviște",
+    "address": "Str. Mitropolit Damaschin Coravu nr. 1, Târgoviște",
+    "priest": "Pr. Protoiereu Gheorghe Ionescu",
+    "phone": "+40245123456",
+    "email": "catedrala@mitropolia-targovistei.ro"
+  },
+  {
+    "name": "Parohia Sfântul Nicolae",
+    "protopopiat": "Târgoviște",
+    "address": "Str. Nicolae Bălcescu nr. 15, Târgoviște",
+    "priest": "Pr. Ioan Popescu",
+    "phone": "+40245234567"
+  },
+  {
+    "name": "Parohia Sfânta Treime",
+    "protopopiat": "Târgoviște",
+    "address": "Str. Justiției nr. 42, Târgoviște",
+    "priest": "Pr. Vasile Marinescu",
+    "phone": "+40245345678"
+  },
+  {
+    "name": "Parohia Adormirea Maicii Domnului",
+    "protopopiat": "Moreni",
+    "address": "Str. Victoriei nr. 23, Moreni",
+    "priest": "Pr. Dumitru Constantin",
+    "phone": "+40245456789"
+  },
+  {
+    "name": "Mănăstirea Viforâta",
+    "protopopiat": "Găești",
+    "address": "Comuna Viforâta, sat Mănăstirea",
+    "priest": "Arhim. Paisie Dumitrescu",
+    "phone": "+40245789012"
+  }
+]

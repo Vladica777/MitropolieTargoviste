@@ -1,0 +1,294 @@
+{
+  "site": {
+    "title": "Metropolis of Târgoviște"
+  },
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "news": "News",
+    "events": "Events",
+    "parishes": "Parishes",
+    "gallery": "Gallery",
+    "contact": "Contact",
+    "donate": "Donate"
+  },
+  "meta": {
+    "home": {
+      "title": "Metropolis of Târgoviște - Archdiocese of Târgoviște",
+      "description": "Official website of the Metropolis of Târgoviște. News, events, Orthodox calendar, parish information and pastoral-missionary activities."
+    },
+    "about": {
+      "title": "About the Metropolis of Târgoviște",
+      "description": "History, mission and structure of the Metropolis of Târgoviște. Leadership, jurisdiction and pastoral-missionary activities."
+    },
+    "news": {
+      "title": "News | Metropolis of Târgoviște",
+      "description": "News and updates from the life of the Metropolis of Târgoviște."
+    },
+    "events": {
+      "title": "Orthodox Calendar 2025 - Events | Metropolis of Târgoviște",
+      "description": "Orthodox calendar 2025 with major feasts, fasting periods and local events. Easter, Palm Sunday, Pentecost and other important celebrations."
+    },
+    "parishes": {
+      "title": "Parishes | Metropolis of Târgoviște",
+      "description": "Complete list of parishes under the jurisdiction of the Metropolis of Târgoviște."
+    },
+    "gallery": {
+      "title": "Photo Gallery | Metropolis of Târgoviște",
+      "description": "Photo gallery with images from events and activities of the Metropolis of Târgoviște."
+    },
+    "contact": {
+      "title": "Contact | Metropolis of Târgoviște",
+      "description": "Contact the Metropolis of Târgoviște. Address, phone, email and contact form."
+    },
+    "donate": {
+      "title": "Donations | Metropolis of Târgoviște",
+      "description": "Support the activities of the Metropolis of Târgoviște through donations. Your contribution helps restore holy places and social-philanthropic programs."
+    },
+    "privacy": {
+      "title": "Privacy Policy | Metropolis of Târgoviște",
+      "description": "Privacy and cookies policy of the Metropolis of Târgoviște website."
+    }
+  },
+  "home": {
+    "hero": {
+      "title": "Welcome to the Metropolis of Târgoviște",
+      "subtitle": "Tradition, faith and community in the service of the Lord",
+      "cta1": "About us",
+      "cta2": "Orthodox calendar"
+    },
+    "welcome": {
+      "title": "Welcome Message",
+      "p1": "The Metropolis of Târgoviște is a diocese of the Romanian Orthodox Church, with a rich history and a profound spiritual mission in service to the faithful of Dâmbovița County and neighboring regions.",
+      "p2": "Under the guidance of His Eminence the Metropolitan, we are dedicated to promoting Orthodox Christian values, supporting parish communities and developing the spiritual life of all who seek closeness to God.",
+      "readMore": "Read more →"
+    },
+    "news": {
+      "title": "Recent News",
+      "viewAll": "View all →"
+    },
+    "events": {
+      "title": "Upcoming Events",
+      "calendar": "Full calendar →"
+    },
+    "cta": {
+      "title": "Support the Metropolis",
+      "description": "Your contribution helps restore and maintain holy places, support social-philanthropic programs and develop the spiritual life of the community.",
+      "button": "Donate now"
+    }
+  },
+  "about": {
+    "hero": {
+      "title": "About the Metropolis of Târgoviște",
+      "subtitle": "History, mission and organizational structure"
+    },
+    "history": {
+      "title": "History",
+      "p1": "The Metropolis of Târgoviște has deep roots in the history of Romanian Christianity, founded to serve the Orthodox community in southern Muntenia. Throughout the centuries, it has been an important spiritual center, contributing to the preservation and promotion of Orthodox Christian values.",
+      "p2": "In the medieval period, the Târgoviște region was an important religious and political center, and the local diocese played an essential role in the spiritual life of the Romanian people. Many of the churches and monasteries in the area are living testimonies of this long tradition.",
+      "p3": "Today, the Metropolis continues its centuries-old mission, adapting to modern challenges while preserving unchanged the fundamental principles of Orthodox faith."
+    },
+    "mission": {
+      "title": "Mission and Vision",
+      "p1": "The mission of the Metropolis of Târgoviște is to preach the Gospel of Christ, administer the Holy Sacraments and spiritually shepherd the community of faithful in its jurisdiction.",
+      "values": "Our fundamental values:",
+      "value1": "Faith in the Holy Trinity and Apostolic Tradition",
+      "value2": "Humble service to the Christian community",
+      "value3": "Christian charity and philanthropy",
+      "value4": "Religious education and spiritual formation",
+      "value5": "Preservation and promotion of Orthodox cultural heritage"
+    },
+    "structure": {
+      "title": "Organizational Structure",
+      "p1": "The Metropolis of Târgoviște is led by His Eminence the Metropolitan and is organized into several deaneries that coordinate parishes in the territory.",
+      "departments": "Departments and services:",
+      "dept1": "Metropolitan Chancellery - administration of official acts and documents",
+      "dept2": "Education Department - coordination of religious education",
+      "dept3": "Social-philanthropic Sector - social assistance programs",
+      "dept4": "Pilgrimage Office - organization of pilgrimages",
+      "dept5": "Diocesan Library and Archives - preservation of cultural heritage"
+    },
+    "jurisdiction": {
+      "title": "Territorial Jurisdiction",
+      "p1": "The Metropolis of Târgoviște includes Orthodox parishes in Dâmbovița County and surrounding areas, serving a community of over 500,000 faithful. The jurisdiction includes over 300 parishes, monasteries and hermitages."
+    },
+    "sidebar": {
+      "leadership": "Leadership",
+      "metropolitan": "His Eminence Metropolitan\nNectarie (Full Name)",
+      "vicar": "Patriarchal Vicar\nHis Grace Bishop...",
+      "contact": "Contact",
+      "schedule": "Schedule",
+      "scheduleText": "Monday - Friday: 09:00 - 17:00\nSaturday: 09:00 - 13:00\nSunday: Closed"
+    }
+  },
+  "news": {
+    "hero": {
+      "title": "News and Updates",
+      "subtitle": "Latest events from the life of the Metropolis"
+    },
+    "readMore": "Read more →"
+  },
+  "events": {
+    "hero": {
+      "title": "Orthodox Calendar 2025",
+      "subtitle": "Feasts, fasts and events of the Metropolis"
+    },
+    "filters": {
+      "view": "View:",
+      "list": "List",
+      "calendar": "Calendar",
+      "type": "Type:",
+      "all": "All",
+      "major": "Major Feasts",
+      "feast": "Feasts",
+      "fast": "Fasting",
+      "dispensation": "Dispensations",
+      "month": "Month:",
+      "allMonths": "All months"
+    },
+    "export": "📅 Export calendar (.ics)"
+  },
+  "gallery": {
+    "hero": {
+      "title": "Photo Gallery",
+      "subtitle": "Moments from the life of the Metropolis"
+    }
+  },
+  "parishes": {
+    "hero": {
+      "title": "Parishes of the Metropolis",
+      "subtitle": "Over 300 parishes and monasteries in Dâmbovița County"
+    },
+    "intro": "The Metropolis of Târgoviște includes in its jurisdiction over 300 parishes, monasteries and hermitages in Dâmbovița County and neighboring areas. Each parish is led by a parish priest who fulfills his pastoral-missionary mission under the guidance of the deans and His Eminence the Metropolitan.",
+    "search": "Search parish:",
+    "protopopiat": "Deanery:",
+    "all": "All",
+    "note": "For complete information about all parishes in the Metropolis jurisdiction, please contact the Metropolitan Chancellery at +40 245 123 456 or cancelarie@mitropolia-targovistei.ro."
+  },
+  "contact": {
+    "hero": {
+      "title": "Contact",
+      "subtitle": "Contact the Metropolis of Târgoviște"
+    },
+    "info": {
+      "title": "Contact Information",
+      "address": "Address",
+      "phone": "Phone",
+      "email": "Email",
+      "schedule": "Schedule",
+      "scheduleText": "Monday - Friday: 09:00 - 17:00\nSaturday: 09:00 - 13:00\nSunday: Closed"
+    },
+    "form": {
+      "title": "Send us a message",
+      "description": "Fill in the form below and we will contact you as soon as possible.",
+      "name": "Full name *",
+      "email": "Email *",
+      "phone": "Phone",
+      "subject": "Subject *",
+      "message": "Message *",
+      "submit": "Send message"
+    },
+    "map": {
+      "title": "Location",
+      "placeholder": "Map will be displayed here"
+    }
+  },
+  "donate": {
+    "hero": {
+      "title": "Support the Metropolis of Târgoviște",
+      "subtitle": "Your contribution makes our spiritual and philanthropic mission possible"
+    },
+    "intro": "Your donations help us continue our pastoral-missionary work, restore and maintain holy places, support social-philanthropic programs and provide support to parish communities throughout the diocese.",
+    "causes": {
+      "title": "How donations are used",
+      "restoration": "Church Restoration",
+      "restorationText": "Restoration and preservation of historical monuments and churches in the diocese, including paintings, iconostases and architectural elements.",
+      "social": "Social Assistance",
+      "socialText": "Programs to help needy families, lonely elderly, orphans and people in difficulty.",
+      "education": "Religious Education",
+      "educationText": "Supporting religious education programs for children, youth and adults, as well as continuing clergy formation.",
+      "mission": "Missionary Activities",
+      "missionText": "Supporting pastoral-missionary activities, religious publications and evangelization programs."
+    },
+    "methods": {
+      "title": "Donation Methods",
+      "bank": "Bank Transfer",
+      "bankNote": "Please mention in \"Payment details\" the purpose of the donation (e.g. \"Church restoration\", \"Social assistance\", etc.)",
+      "online": "Online Donation",
+      "onlineText": "You can donate online by bank card using the secure payment platform.",
+      "onlineButton": "Donate online (coming soon)",
+      "person": "At headquarters",
+      "personText": "You can donate directly at the Metropolis headquarters during working hours."
+    },
+    "tax": {
+      "title": "Tax Deduction",
+      "text": "According to current legislation, donations to religious institutions are tax deductible up to 5% of annual income. Upon request, we can issue the necessary documents for tax deduction.",
+      "contact": "For more information, contact the Metropolitan Chancellery at cancelarie@mitropolia-targovistei.ro"
+    },
+    "thanks": {
+      "title": "Thank you for your generosity!",
+      "text": "Every donation, regardless of size, is received with gratitude and is used in service to the community and the Church. May God reward you!"
+    }
+  },
+  "privacy": {
+    "hero": {
+      "title": "Privacy and Cookies Policy",
+      "subtitle": "Updated January 1, 2025"
+    },
+    "intro": {
+      "title": "Introduction",
+      "p1": "The Metropolis of Târgoviște respects the privacy of website visitors and is committed to protecting personal data in accordance with the General Data Protection Regulation (GDPR) and applicable Romanian legislation.",
+      "p2": "This policy explains what information we collect, how we use it and what your rights are regarding personal data."
+    }
+  },
+  "expandable": {
+    "showMore": "Show more",
+    "showLess": "Show less"
+  },
+  "galleryProgressive": {
+    "loadMore": "Load more",
+    "loading": "Loading...",
+    "allLoaded": "All images have been loaded.",
+    "imagesLoaded": "images loaded"
+  },
+  "footer": {
+    "about": {
+      "title": "Metropolis of Târgoviște",
+      "text": "The Metropolis of Târgoviște serves the Orthodox community in Dâmbovița County and neighboring regions, promoting Christian values and Orthodox tradition."
+    },
+    "links": {
+      "title": "Quick Links"
+    },
+    "contact": {
+      "title": "Contact"
+    },
+    "social": {
+      "title": "Social Media"
+    },
+    "rights": "All rights reserved.",
+    "privacy": "Privacy Policy"
+  },
+  "month": {
+    "jan": "January",
+    "feb": "February",
+    "mar": "March",
+    "apr": "April",
+    "may": "May",
+    "jun": "June",
+    "jul": "July",
+    "aug": "August",
+    "sep": "September",
+    "oct": "October",
+    "nov": "November",
+    "dec": "December"
+  },
+  "day": {
+    "sun": "S",
+    "mon": "M",
+    "tue": "T",
+    "wed": "W",
+    "thu": "T",
+    "fri": "F",
+    "sat": "S"
+  }
+}

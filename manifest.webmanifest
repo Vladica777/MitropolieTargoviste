@@ -1,0 +1,27 @@
+{
+  "name": "Mitropolia Târgoviștei",
+  "short_name": "Mitropolia TGV",
+  "description": "Site oficial al Mitropoliei Târgoviștei",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#FAFAF8",
+  "theme_color": "#0F1E3A",
+  "orientation": "portrait",
+  "icons": [
+    {
+      "src": "/assets/img/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/assets/img/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "lang": "ro",
+  "dir": "ltr",
+  "categories": ["religion", "news", "lifestyle"]
+}

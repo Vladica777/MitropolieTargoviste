@@ -1,0 +1,14 @@
+# Mitropolia Targovistei - robots.txt
+
+User-agent: *
+Allow: /
+
+# Sitemaps
+Sitemap: https://mitropolia-targovistei.ro/sitemap.xml
+
+# Disallow admin/private areas (if any)
+# Disallow: /admin/
+# Disallow: /private/
+
+# Crawl-delay
+Crawl-delay: 1

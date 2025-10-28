@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-i18n="meta.parishes.title">Parohii | Mitropolia Târgoviștei</title>
+    <meta name="description" data-i18n="meta.parishes.description" content="Lista completă a parohiilor din jurisdicția Mitropoliei Târgoviștei.">
+    
+    <link rel="canonical" href="https://mitropolia-targovistei.ro/parohii.html">
+    <link rel="alternate" hreflang="ro" href="https://mitropolia-targovistei.ro/parohii.html">
+    <link rel="alternate" hreflang="en" href="https://mitropolia-targovistei.ro/en/parohii.html">
+    
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Parohii - Mitropolia Târgoviștei">
+    <meta property="og:url" content="https://mitropolia-targovistei.ro/parohii.html">
+    
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="/assets/css/base.css">
+    <link rel="stylesheet" href="/assets/css/layout.css">
+    <link rel="stylesheet" href="/assets/css/components.css">
+    <link rel="stylesheet" href="/assets/css/themes.css">
+</head>
+<body>
+    <header class="header" role="banner">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <a href="/" aria-label="Mitropolia Târgoviștei - Acasă">
+                        <img src="/assets/img/logo.svg" alt="Mitropolia Târgoviștei" width="60" height="60">
+                        <span class="logo-text" data-i18n="site.title">Mitropolia Târgoviștei</span>
+                    </a>
+                </div>
+                
+                <nav class="main-nav" role="navigation" aria-label="Navigare principală">
+                    <button class="menu-toggle" aria-label="Deschide meniu" aria-expanded="false" aria-controls="main-menu">
+                        <span class="hamburger"></span>
+                    </button>
+                    
+                    <ul class="nav-menu" id="main-menu">
+                        <li><a href="/" data-i18n="nav.home">Acasă</a></li>
+                        <li><a href="/despre.html" data-i18n="nav.about">Despre</a></li>
+                        <li><a href="/stiri.html" data-i18n="nav.news">Știri</a></li>
+                        <li><a href="/evenimente.html" data-i18n="nav.events">Evenimente</a></li>
+                        <li><a href="/parohii.html" class="active" data-i18n="nav.parishes">Parohii</a></li>
+                        <li><a href="/galerie.html" data-i18n="nav.gallery">Galerie</a></li>
+                        <li><a href="/contact.html" data-i18n="nav.contact">Contact</a></li>
+                    </ul>
+                    
+                    <div class="header-actions">
+                        <button class="lang-switch" aria-label="Schimbă limba" data-lang="en">
+                            <span class="lang-icon">🌐</span>
+                            <span class="lang-text">EN</span>
+                        </button>
+                        <a href="/doneaza.html" class="btn btn-primary btn-small" data-i18n="nav.donate">Donează</a>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main id="main-content" role="main">
+        <nav class="breadcrumbs" aria-label="Breadcrumb">
+            <div class="container">
+                <ol itemscope itemtype="https://schema.org/BreadcrumbList">
+                    <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                        <a itemprop="item" href="/"><span itemprop="name" data-i18n="nav.home">Acasă</span></a>
+                        <meta itemprop="position" content="1" />
+                    </li>
+                    <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                        <span itemprop="name" data-i18n="nav.parishes">Parohii</span>
+                        <meta itemprop="position" content="2" />
+                    </li>
+                </ol>
+            </div>
+        </nav>
+
+        <section class="page-header">
+            <div class="container">
+                <h1 data-i18n="parishes.hero.title">Parohiile Mitropoliei</h1>
+                <p class="page-subtitle" data-i18n="parishes.hero.subtitle">Peste 300 de parohii și mănăstiri în județul Dâmbovița</p>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="container">
+                <div class="parishes-intro">
+                    <p data-i18n="parishes.intro">Mitropolia Târgoviștei cuprinde în jurisdicția sa peste 300 de parohii, mănăstiri și schituri din județul Dâmbovița și zonele limitrofe. Fiecare parohie este condusă de un preot paroh care își îndeplinește misiunea pastoral-misionară sub îndrumarea protopopilor și a Înaltpreasfințitului Mitropolit.</p>
+                </div>
+
+                <!-- Search and Filter -->
+                <div class="parishes-filters">
+                    <div class="filter-group">
+                        <label for="search-parish" data-i18n="parishes.search">Caută parohie:</label>
+                        <input type="text" id="search-parish" class="form-input" placeholder="Numele parohiei sau localitatea...">
+                    </div>
+                    
+                    <div class="filter-group">
+                        <label for="protopopiat-filter" data-i18n="parishes.protopopiat">Protopopiat:</label>
+                        <select id="protopopiat-filter" class="form-select">
+                            <option value="all" data-i18n="parishes.all">Toate</option>
+                            <option value="targoviste">Protopopiatul Târgoviște</option>
+                            <option value="moreni">Protopopiatul Moreni</option>
+                            <option value="gaesti">Protopopiatul Găești</option>
+                            <option value="pucioasa">Protopopiatul Pucioasa</option>
+                        </select>
+                    </div>
+                </div>
+
+                <!-- Parishes List -->
+                <div class="parishes-list" id="parishes-list">
+                    <div class="parish-card" data-protopopiat="targoviste">
+                        <h3 class="parish-name">Parohia Sfântul Nicolae - Târgoviște</h3>
+                        <div class="parish-details">
+                            <p><strong>Adresă:</strong> Str. Nicolae Bălcescu nr. 15, Târgoviște</p>
+                            <p><strong>Preot paroh:</strong> Pr. Ioan Popescu</p>
+                            <p><strong>Telefon:</strong> <a href="tel:+40245234567">+40 245 234 567</a></p>
+                            <p><strong>Program slujbe:</strong> Duminică și sărbători - 08:00 și 10:00</p>
+                        </div>
+                    </div>
+
+                    <div class="parish-card" data-protopopiat="targoviste">
+                        <h3 class="parish-name">Catedrala Mitropoliei - Târgoviște</h3>
+                        <div class="parish-details">
+                            <p><strong>Adresă:</strong> Str. Mitropolit Damaschin Coravu nr. 1, Târgoviște</p>
+                            <p><strong>Protopop:</strong> Pr. Protoiereu Gheorghe Ionescu</p>
+                            <p><strong>Telefon:</strong> <a href="tel:+40245123456">+40 245 123 456</a></p>
+                            <p><strong>Program slujbe:</strong> Zilnic - 07:30 și 17:00; Duminică - 07:00, 09:00, 11:00</p>
+                        </div>
+                    </div>
+
+                    <div class="parish-card" data-protopopiat="targoviste">
+                        <h3 class="parish-name">Parohia Sfânta Treime - Târgoviște</h3>
+                        <div class="parish-details">
+                            <p><strong>Adresă:</strong> Str. Justiției nr. 42, Târgoviște</p>
+                            <p><strong>Preot paroh:</strong> Pr. Vasile Marinescu</p>
+                            <p><strong>Telefon:</strong> <a href="tel:+40245345678">+40 245 345 678</a></p>
+                            <p><strong>Program slujbe:</strong> Duminică - 09:00; Sărbători - 08:00</p>
+                        </div>
+                    </div>
+
+                    <div class="parish-card" data-protopopiat="moreni">
+                        <h3 class="parish-name">Parohia Adormirea Maicii Domnului - Moreni</h3>
+                        <div class="parish-details">
+                            <p><strong>Adresă:</strong> Str. Victoriei nr. 23, Moreni</p>
+                            <p><strong>Preot paroh:</strong> Pr. Dumitru Constantin</p>
+                            <p><strong>Telefon:</strong> <a href="tel:+40245456789">+40 245 456 789</a></p>
+                            <p><strong>Program slujbe:</strong> Duminică - 08:30 și 10:30</p>
+                        </div>
+                    </div>
+
+                    <div class="parish-card" data-protopopiat="moreni">
+                        <h3 class="parish-name">Parohia Sfântul Gheorghe - Moreni</h3>
+                        <div class="parish-details">
+                            <p><strong>Adresă:</strong> Str. Republicii nr. 8, Moreni</p>
+                            <p><strong>Preot paroh:</strong> Pr. Mihai Petrescu</p>
+                            <p><strong>Telefon:</strong> <a href="tel:+40245567890">+40 245 567 890</a></p>
+                            <p><strong>Program slujbe:</strong> Duminică - 09:00</p>
+                        </div>
+                    </div>
+
+                    <div class="parish-card" data-protopopiat="gaesti">
+                        <h3 class="parish-name">Parohia Sfântul Dumitru - Găești</h3>
+                        <div class="parish-details">
+                            <p><strong>Adresă:</strong> Str. Principală nr. 35, Găești</p>
+                            <p><strong>Preot paroh:</strong> Pr. Alexandru Stoica</p>
+                            <p><strong>Telefon:</strong> <a href="tel:+40245678901">+40 245 678 901</a></p>
+                            <p><strong>Program slujbe:</strong> Duminică - 08:00; Sărbători - 09:00</p>
+                        </div>
+                    </div>
+
+                    <div class="parish-card" data-protopopiat="gaesti">
+                        <h3 class="parish-name">Mănăstirea Viforâta</h3>
+                        <div class="parish-details">
+                            <p><strong>Adresă:</strong> Comuna Viforâta, sat Mănăstirea</p>
+                            <p><strong>Stareț:</strong> Arhim. Paisie Dumitrescu</p>
+                            <p><strong>Telefon:</strong> <a href="tel:+40245789012">+40 245 789 012</a></p>
+                            <p><strong>Program slujbe:</strong> Zilnic - 06:00 și 17:00</p>
+                        </div>
+                    </div>
+
+                    <div class="parish-card" data-protopopiat="pucioasa">
+                        <h3 class="parish-name">Parohia Nașterea Maicii Domnului - Pucioasa</h3>
+                        <div class="parish-details">
+                            <p><strong>Adresă:</strong> Str. Libertății nr. 12, Pucioasa</p>
+                            <p><strong>Preot paroh:</strong> Pr. Constantin Radu</p>
+                            <p><strong>Telefon:</strong> <a href="tel:+40245890123">+40 245 890 123</a></p>
+                            <p><strong>Program slujbe:</strong> Duminică - 09:00; Vineri - 17:00 (Acatist)</p>
+                        </div>
+                    </div>
+
+                    <div class="parish-card" data-protopopiat="pucioasa">
+                        <h3 class="parish-name">Parohia Sfântul Ioan Botezătorul - Pucioasa</h3>
+                        <div class="parish-details">
+                            <p><strong>Adresă:</strong> Str. Eroilor nr. 27, Pucioasa</p>
+                            <p><strong>Preot paroh:</strong> Pr. Ștefan Matei</p>
+                            <p><strong>Telefon:</strong> <a href="tel:+40245901234">+40 245 901 234</a></p>
+                            <p><strong>Program slujbe:</strong> Duminică - 10:00</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="parishes-note">
+                    <p data-i18n="parishes.note">Pentru informații complete despre toate parohiile din jurisdicția Mitropoliei, vă rugăm să contactați Cancelaria Mitropoliei la <a href="tel:+40245123456">+40 245 123 456</a> sau <a href="mailto:cancelarie@mitropolia-targovistei.ro">cancelarie@mitropolia-targovistei.ro</a>.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer" role="contentinfo">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3 data-i18n="footer.about.title">Mitropolia Târgoviștei</h3>
+                    <p data-i18n="footer.about.text">Mitropolia Târgoviștei servește comunitatea ortodoxă din județul Dâmbovița și regiunile învecinate, promovând valorile creștine și tradiția ortodoxă.</p>
+                </div>
+                
+                <div class="footer-section">
+                    <h3 data-i18n="footer.links.title">Linkuri rapide</h3>
+                    <ul class="footer-links">
+                        <li><a href="/despre.html" data-i18n="nav.about">Despre</a></li>
+                        <li><a href="/stiri.html" data-i18n="nav.news">Știri</a></li>
+                        <li><a href="/evenimente.html" data-i18n="nav.events">Evenimente</a></li>
+                        <li><a href="/parohii.html" data-i18n="nav.parishes">Parohii</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3 data-i18n="footer.contact.title">Contact</h3>
+                    <address class="footer-address">
+                        <p>Str. Mitropolit Damaschin Coravu nr. 1<br>
+                        Târgoviște, Dâmbovița 130018</p>
+                        <p>Tel: <a href="tel:+40245123456">+40 245 123 456</a></p>
+                        <p>Email: <a href="mailto:contact@mitropolia-targovistei.ro">contact@mitropolia-targovistei.ro</a></p>
+                    </address>
+                </div>
+                
+                <div class="footer-section">
+                    <h3 data-i18n="footer.social.title">Social Media</h3>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook" class="social-link">Facebook</a>
+                        <a href="#" aria-label="YouTube" class="social-link">YouTube</a>
+                        <a href="#" aria-label="Instagram" class="social-link">Instagram</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 <span data-i18n="site.title">Mitropolia Târgoviștei</span>. <span data-i18n="footer.rights">Toate drepturile rezervate.</span></p>
+                <p><a href="/politici.html" data-i18n="footer.privacy">Politică de confidențialitate</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="/assets/js/i18n.js" defer></script>
+    <script src="/assets/js/seo.js" defer></script>
+    <script src="/assets/js/main.js" defer></script>
+    <script>
+        // Simple parishes filter
+        document.addEventListener('DOMContentLoaded', function() {
+            const searchInput = document.getElementById('search-parish');
+            const protopopiatFilter = document.getElementById('protopopiat-filter');
+            const parishCards = document.querySelectorAll('.parish-card');
+
+            function filterParishes() {
+                const searchTerm = searchInput.value.toLowerCase();
+                const selectedProtopopiat = protopopiatFilter.value;
+
+                parishCards.forEach(card => {
+                    const cardText = card.textContent.toLowerCase();
+                    const cardProtopopiat = card.getAttribute('data-protopopiat');
+                    
+                    const matchesSearch = cardText.includes(searchTerm);
+                    const matchesProtopopiat = selectedProtopopiat === 'all' || cardProtopopiat === selectedProtopopiat;
+
+                    card.style.display = (matchesSearch && matchesProtopopiat) ? 'block' : 'none';
+                });
+            }
+
+            searchInput.addEventListener('input', filterParishes);
+            protopopiatFilter.addEventListener('change', filterParishes);
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  
+  <url>
+    <loc>https://mitropolia-targovistei.ro/</loc>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://mitropolia-targovistei.ro/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mitropolia-targovistei.ro/en/"/>
+    <lastmod>2025-01-01</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+  </url>
+  
+  <url>
+    <loc>https://mitropolia-targovistei.ro/despre.html</loc>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://mitropolia-targovistei.ro/despre.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mitropolia-targovistei.ro/en/despre.html"/>
+    <lastmod>2025-01-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <url>
+    <loc>https://mitropolia-targovistei.ro/stiri.html</loc>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://mitropolia-targovistei.ro/stiri.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mitropolia-targovistei.ro/en/stiri.html"/>
+    <lastmod>2025-01-01</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.9</priority>
+  </url>
+  
+  <url>
+    <loc>https://mitropolia-targovistei.ro/evenimente.html</loc>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://mitropolia-targovistei.ro/evenimente.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mitropolia-targovistei.ro/en/evenimente.html"/>
+    <lastmod>2025-01-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  
+  <url>
+    <loc>https://mitropolia-targovistei.ro/parohii.html</loc>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://mitropolia-targovistei.ro/parohii.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mitropolia-targovistei.ro/en/parohii.html"/>
+    <lastmod>2025-01-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <url>
+    <loc>https://mitropolia-targovistei.ro/galerie.html</loc>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://mitropolia-targovistei.ro/galerie.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mitropolia-targovistei.ro/en/galerie.html"/>
+    <lastmod>2025-01-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://mitropolia-targovistei.ro/doneaza.html</loc>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://mitropolia-targovistei.ro/doneaza.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mitropolia-targovistei.ro/en/doneaza.html"/>
+    <lastmod>2025-01-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <url>
+    <loc>https://mitropolia-targovistei.ro/contact.html</loc>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://mitropolia-targovistei.ro/contact.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mitropolia-targovistei.ro/en/contact.html"/>
+    <lastmod>2025-01-01</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://mitropolia-targovistei.ro/politici.html</loc>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://mitropolia-targovistei.ro/politici.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mitropolia-targovistei.ro/en/politici.html"/>
+    <lastmod>2025-01-01</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+
+</urlset>

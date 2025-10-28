@@ -1,0 +1,294 @@
+{
+  "site": {
+    "title": "Mitropolia Târgoviștei"
+  },
+  "nav": {
+    "home": "Acasă",
+    "about": "Despre",
+    "news": "Știri",
+    "events": "Evenimente",
+    "parishes": "Parohii",
+    "gallery": "Galerie",
+    "contact": "Contact",
+    "donate": "Donează"
+  },
+  "meta": {
+    "home": {
+      "title": "Mitropolia Târgoviștei - Arhiepiscopia Târgoviștei",
+      "description": "Site oficial al Mitropoliei Târgoviștei. Știri, evenimente, calendar ortodox, informații despre parohii și activități pastoral-misionare."
+    },
+    "about": {
+      "title": "Despre Mitropolia Târgoviștei",
+      "description": "Istoria, misiunea și structura Mitropoliei Târgoviștei. Conducere, jurisdicție și activități pastoral-misionare."
+    },
+    "news": {
+      "title": "Știri | Mitropolia Târgoviștei",
+      "description": "Știri și actualități din viața Mitropoliei Târgoviștei."
+    },
+    "events": {
+      "title": "Calendar Ortodox 2025 - Evenimente | Mitropolia Târgoviștei",
+      "description": "Calendar ortodox 2025 cu sărbători împărătești, posturi și evenimente locale. Paștile, Floriile, Rusaliile și alte sărbători importante."
+    },
+    "parishes": {
+      "title": "Parohii | Mitropolia Târgoviștei",
+      "description": "Lista completă a parohiilor din jurisdicția Mitropoliei Târgoviștei."
+    },
+    "gallery": {
+      "title": "Galerie Foto | Mitropolia Târgoviștei",
+      "description": "Galerie foto cu imagini din evenimentele și activitățile Mitropoliei Târgoviștei."
+    },
+    "contact": {
+      "title": "Contact | Mitropolia Târgoviștei",
+      "description": "Contactați Mitropolia Târgoviștei. Adresă, telefon, email și formular de contact."
+    },
+    "donate": {
+      "title": "Donații | Mitropolia Târgoviștei",
+      "description": "Susține activitățile Mitropoliei Târgoviștei prin donații. Contribuția ta ajută la restaurarea lăcașurilor sfinte și programele social-filantropice."
+    },
+    "privacy": {
+      "title": "Politică de confidențialitate | Mitropolia Târgoviștei",
+      "description": "Politica de confidențialitate și utilizare cookies a site-ului Mitropoliei Târgoviștei."
+    }
+  },
+  "home": {
+    "hero": {
+      "title": "Bine ați venit la Mitropolia Târgoviștei",
+      "subtitle": "Tradiție, credință și comunitate în slujba Domnului",
+      "cta1": "Despre noi",
+      "cta2": "Calendar ortodox"
+    },
+    "welcome": {
+      "title": "Mesaj de bun venit",
+      "p1": "Mitropolia Târgoviștei este o episcopie a Bisericii Ortodoxe Române, cu o istorie bogată și o misiune spirituală profundă în slujba credincioșilor din județul Dâmbovița și regiunile învecinate.",
+      "p2": "Sub îndrumarea Înaltpreasfințitului Mitropolit, ne dedicăm promovării valorilor creștine ortodoxe, susținerii comunităților parohiale și dezvoltării vieții spirituale a tuturor celor care caută apropierea de Dumnezeu.",
+      "readMore": "Citește mai mult →"
+    },
+    "news": {
+      "title": "Știri recente",
+      "viewAll": "Vezi toate →"
+    },
+    "events": {
+      "title": "Evenimente apropiate",
+      "calendar": "Calendar complet →"
+    },
+    "cta": {
+      "title": "Susține activitățile Mitropoliei",
+      "description": "Contribuția dumneavoastră ajută la restaurarea și întreținerea lăcașurilor sfinte, la susținerea programelor social-filantropice și la dezvoltarea vieții spirituale a comunității.",
+      "button": "Donează acum"
+    }
+  },
+  "about": {
+    "hero": {
+      "title": "Despre Mitropolia Târgoviștei",
+      "subtitle": "Istorie, misiune și structură organizatorică"
+    },
+    "history": {
+      "title": "Istoric",
+      "p1": "Mitropolia Târgoviștei are rădăcini adânci în istoria creștinismului românesc, fiind întemeiată pentru a deservi comunitatea ortodoxă din sudul Munteniei. De-a lungul secolelor, a fost un centru spiritual important, contribuind la păstrarea și promovarea valorilor creștine ortodoxe.",
+      "p2": "În perioada medievală, regiunea Târgoviștei a fost un important centru religios și politic, iar episcopia locală a jucat un rol esențial în viața spirituală a poporului român. Multe dintre bisericile și mănăstirile din zonă sunt mărturii vii ale acestei tradiții îndelungate.",
+      "p3": "Astăzi, Mitropolia continuă misiunea de veacuri, adaptându-se provocărilor moderne, dar păstrând neschimbate principiile fundamentale ale credinței ortodoxe."
+    },
+    "mission": {
+      "title": "Misiune și Viziune",
+      "p1": "Misiunea Mitropoliei Târgoviștei este de a propovădui Evanghelia lui Hristos, de a administra Sfintele Taine și de a păstori spiritual comunitatea de credincioși din jurisdicția sa.",
+      "values": "Valorile noastre fundamentale:",
+      "value1": "Credința în Sfânta Treime și în Tradiția Apostolică",
+      "value2": "Slujirea smerită a comunității creștine",
+      "value3": "Caritatea și filantropia creștină",
+      "value4": "Educația religioasă și formarea spirituală",
+      "value5": "Păstrarea și promovarea moștenirii culturale ortodoxe"
+    },
+    "structure": {
+      "title": "Structură organizatorică",
+      "p1": "Mitropolia Târgoviștei este condusă de Înaltpreasfințitul Mitropolit și este organizată în mai multe protopopiate care coordonează parohiile din teritoriu.",
+      "departments": "Departamente și servicii:",
+      "dept1": "Cancelaria Mitropoliei - administrarea actelor și documentelor oficiale",
+      "dept2": "Departamentul de învățământ - coordonarea educației religioase",
+      "dept3": "Sectorul social-filantropic - programe de asistență socială",
+      "dept4": "Biroul de pelerinaje - organizarea pelerinajelor",
+      "dept5": "Biblioteca și arhiva eparhială - păstrarea patrimoniului cultural"
+    },
+    "jurisdiction": {
+      "title": "Jurisdicție teritorială",
+      "p1": "Mitropolia Târgoviștei cuprinde parohiile ortodoxe din județul Dâmbovița și zone limitrofe, deservind o comunitate de peste 500.000 de credincioși. Jurisdicția include peste 300 de parohii, mănăstiri și schituri."
+    },
+    "sidebar": {
+      "leadership": "Conducere",
+      "metropolitan": "Înaltpreasfințitul Mitropolit\nNectarie (Numele complet)",
+      "vicar": "Vicar Patriarhal\nPreasfinția Sa Episcop...",
+      "contact": "Contact",
+      "schedule": "Program",
+      "scheduleText": "Luni - Vineri: 09:00 - 17:00\nSâmbătă: 09:00 - 13:00\nDuminică: Închis"
+    }
+  },
+  "news": {
+    "hero": {
+      "title": "Știri și actualități",
+      "subtitle": "Cele mai recente evenimente din viața Mitropoliei"
+    },
+    "readMore": "Citește mai mult →"
+  },
+  "events": {
+    "hero": {
+      "title": "Calendar Ortodox 2025",
+      "subtitle": "Sărbători, posturi și evenimente ale Mitropoliei"
+    },
+    "filters": {
+      "view": "Vizualizare:",
+      "list": "Listă",
+      "calendar": "Calendar",
+      "type": "Tip:",
+      "all": "Toate",
+      "major": "Sărbători împărătești",
+      "feast": "Sărbători",
+      "fast": "Posturi",
+      "dispensation": "Dezlegări",
+      "month": "Luna:",
+      "allMonths": "Toate lunile"
+    },
+    "export": "📅 Exportă calendar (.ics)"
+  },
+  "gallery": {
+    "hero": {
+      "title": "Galerie Foto",
+      "subtitle": "Momente din viața Mitropoliei"
+    }
+  },
+  "parishes": {
+    "hero": {
+      "title": "Parohiile Mitropoliei",
+      "subtitle": "Peste 300 de parohii și mănăstiri în județul Dâmbovița"
+    },
+    "intro": "Mitropolia Târgoviștei cuprinde în jurisdicția sa peste 300 de parohii, mănăstiri și schituri din județul Dâmbovița și zonele limitrofe. Fiecare parohie este condusă de un preot paroh care își îndeplinește misiunea pastoral-misionară sub îndrumarea protopopilor și a Înaltpreasfințitului Mitropolit.",
+    "search": "Caută parohie:",
+    "protopopiat": "Protopopiat:",
+    "all": "Toate",
+    "note": "Pentru informații complete despre toate parohiile din jurisdicția Mitropoliei, vă rugăm să contactați Cancelaria Mitropoliei la +40 245 123 456 sau cancelarie@mitropolia-targovistei.ro."
+  },
+  "contact": {
+    "hero": {
+      "title": "Contact",
+      "subtitle": "Contactați Mitropolia Târgoviștei"
+    },
+    "info": {
+      "title": "Informații de contact",
+      "address": "Adresă",
+      "phone": "Telefon",
+      "email": "Email",
+      "schedule": "Program",
+      "scheduleText": "Luni - Vineri: 09:00 - 17:00\nSâmbătă: 09:00 - 13:00\nDuminică: Închis"
+    },
+    "form": {
+      "title": "Trimite-ne un mesaj",
+      "description": "Completează formularul de mai jos și te vom contacta în cel mai scurt timp posibil.",
+      "name": "Nume complet *",
+      "email": "Email *",
+      "phone": "Telefon",
+      "subject": "Subiect *",
+      "message": "Mesaj *",
+      "submit": "Trimite mesaj"
+    },
+    "map": {
+      "title": "Locație",
+      "placeholder": "Harta va fi afișată aici"
+    }
+  },
+  "donate": {
+    "hero": {
+      "title": "Susține Mitropolia Târgoviștei",
+      "subtitle": "Contribuția ta face posibilă misiunea noastră spirituală și filantropică"
+    },
+    "intro": "Donațiile dumneavoastră ne ajută să continuăm misiunea pastoral-misionară, să restaurăm și să întreținем lăcașurile sfinte, să susținem programele social-filantropice și să oferim sprijin comunităților parohiale din întreaga eparhie.",
+    "causes": {
+      "title": "Cum sunt folosite donațiile",
+      "restoration": "Restaurare biserici",
+      "restorationText": "Restaurarea și conservarea monumentelor istorice și a bisericilor din eparhie, inclusiv picturi, iconostase și elemente arhitecturale.",
+      "social": "Asistență socială",
+      "socialText": "Programe de ajutorare a familiilor nevoiașe, bătrânilor singuri, orfanilor și persoanelor aflate în dificultate.",
+      "education": "Educație religioasă",
+      "educationText": "Susținerea programelor de educație religioasă pentru copii, tineri și adulți, precum și a formării continue a clerului.",
+      "mission": "Activități misionare",
+      "missionText": "Susținerea activităților pastoral-misionare, a publicațiilor religioase și a programelor de evanghelizare."
+    },
+    "methods": {
+      "title": "Modalități de donație",
+      "bank": "Transfer bancar",
+      "bankNote": "Vă rugăm să menționați la \"Detalii plată\" scopul donației (ex: \"Restaurare biserică\", \"Asistență socială\", etc.)",
+      "online": "Donație online",
+      "onlineText": "Puteți dona online prin card bancar folosind platforma securizată de plăți.",
+      "onlineButton": "Donează online (în curând)",
+      "person": "La sediu",
+      "personText": "Puteți dona direct la sediul Mitropoliei în programul de lucru."
+    },
+    "tax": {
+      "title": "Deducere fiscală",
+      "text": "Conform legislației în vigoare, donațiile către instituții de cult sunt deductibile fiscal în limita a 5% din venitul anual. La solicitare, vă putem elibera documentele necesare pentru deducerea fiscală.",
+      "contact": "Pentru mai multe informații, contactați Cancelaria Mitropoliei la cancelarie@mitropolia-targovistei.ro"
+    },
+    "thanks": {
+      "title": "Mulțumim pentru generozitate!",
+      "text": "Fiecare donație, indiferent de mărime, este primită cu recunoștință și este folosită în slujba comunității și a Bisericii. Dumnezeu să vă răsplătească!"
+    }
+  },
+  "privacy": {
+    "hero": {
+      "title": "Politică de confidențialitate și cookies",
+      "subtitle": "Actualizată la 1 ianuarie 2025"
+    },
+    "intro": {
+      "title": "Introducere",
+      "p1": "Mitropolia Târgoviștei respectă confidențialitatea vizitatorilor site-ului web și se angajează să protejeze datele personale în conformitate cu Regulamentul General privind Protecția Datelor (GDPR) și legislația română aplicabilă.",
+      "p2": "Această politică explică ce informații colectăm, cum le folosim și care sunt drepturile dumneavoastră în legătură cu datele personale."
+    }
+  },
+  "expandable": {
+    "showMore": "Arată mai mult",
+    "showLess": "Arată mai puțin"
+  },
+  "galleryProgressive": {
+    "loadMore": "Arată mai mult",
+    "loading": "Se încarcă...",
+    "allLoaded": "Toate imaginile au fost încărcate.",
+    "imagesLoaded": "imagini încărcate"
+  },
+  "footer": {
+    "about": {
+      "title": "Mitropolia Târgoviștei",
+      "text": "Mitropolia Târgoviștei servește comunitatea ortodoxă din județul Dâmbovița și regiunile învecinate, promovând valorile creștine și tradiția ortodoxă."
+    },
+    "links": {
+      "title": "Linkuri rapide"
+    },
+    "contact": {
+      "title": "Contact"
+    },
+    "social": {
+      "title": "Social Media"
+    },
+    "rights": "Toate drepturile rezervate.",
+    "privacy": "Politică de confidențialitate"
+  },
+  "month": {
+    "jan": "Ianuarie",
+    "feb": "Februarie",
+    "mar": "Martie",
+    "apr": "Aprilie",
+    "may": "Mai",
+    "jun": "Iunie",
+    "jul": "Iulie",
+    "aug": "August",
+    "sep": "Septembrie",
+    "oct": "Octombrie",
+    "nov": "Noiembrie",
+    "dec": "Decembrie"
+  },
+  "day": {
+    "sun": "D",
+    "mon": "L",
+    "tue": "Ma",
+    "wed": "Mi",
+    "thu": "J",
+    "fri": "V",
+    "sat": "S"
+  }
+}

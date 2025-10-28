@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-i18n="meta.home.title">Mitropolia Târgoviștei - Arhiepiscopia Târgoviștei</title>
+    <meta name="description" data-i18n="meta.home.description" content="Site oficial al Mitropoliei Târgoviștei. Știri, evenimente, calendar ortodox, informații despre parohii și activități pastoral-misionare.">
+    
+    <!-- SEO -->
+    <link rel="canonical" href="https://mitropolia-targovistei.ro/">
+    <link rel="alternate" hreflang="ro" href="https://mitropolia-targovistei.ro/">
+    <link rel="alternate" hreflang="en" href="https://mitropolia-targovistei.ro/en/">
+    
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" data-i18n="meta.home.title" content="Mitropolia Târgoviștei">
+    <meta property="og:description" data-i18n="meta.home.description" content="Site oficial al Mitropoliei Târgoviștei">
+    <meta property="og:url" content="https://mitropolia-targovistei.ro/">
+    <meta property="og:image" content="https://mitropolia-targovistei.ro/assets/img/cathedral.jpg">
+    <meta property="og:locale" content="ro_RO">
+    <meta property="og:locale:alternate" content="en_US">
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" data-i18n="meta.home.title" content="Mitropolia Târgoviștei">
+    <meta name="twitter:description" data-i18n="meta.home.description" content="Site oficial al Mitropoliei Târgoviștei">
+    <meta name="twitter:image" content="https://mitropolia-targovistei.ro/assets/img/cathedral.jpg">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="manifest" href="/manifest.webmanifest">
+    
+    <!-- Preconnect -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+    <!-- Fonts -->
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" as="style">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="/assets/css/base.css">
+    <link rel="stylesheet" href="/assets/css/layout.css">
+    <link rel="stylesheet" href="/assets/css/components.css">
+    <link rel="stylesheet" href="/assets/css/themes.css">
+    <link rel="stylesheet" href="/assets/css/expandable.css">
+
+    <script src="/assets/js/expandable.js" defer></script>
+    
+    <!-- JSON-LD Organization -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ReligiousOrganization",
+      "name": "Mitropolia Târgoviștei",
+      "alternateName": "Arhiepiscopia Târgoviștei",
+      "url": "https://mitropolia-targovistei.ro",
+      "logo": "https://mitropolia-targovistei.ro/assets/img/logo.png",
+      "description": "Mitropolia Târgoviștei este o episcopie a Bisericii Ortodoxe Române",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Str. Mitropolit Damaschin Coravu nr. 1",
+        "addressLocality": "Târgoviște",
+        "addressRegion": "Dâmbovița",
+        "postalCode": "130018",
+        "addressCountry": "RO"
+      },
+      "telephone": "+40-245-123456",
+      "email": "contact@mitropolia-targovistei.ro"
+    }
+    </script>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header" role="banner">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <a href="/" aria-label="Mitropolia Târgoviștei - Acasă">
+                        <img src="/assets/img/mitropolie-logo.jpg" alt="Mitropolia Târgoviștei" width="60" height="60">
+                        <span class="logo-text" data-i18n="site.title">Mitropolia Târgoviștei</span>
+                    </a>
+                </div>
+                
+                <nav class="main-nav" role="navigation" aria-label="Navigare principală">
+                    <button class="menu-toggle" aria-label="Deschide meniu" aria-expanded="false" aria-controls="main-menu">
+                        <span class="hamburger"></span>
+                    </button>
+                    
+                    <ul class="nav-menu" id="main-menu">
+                        <li><a href="/" class="active" data-i18n="nav.home">Acasă</a></li>
+                        <li><a href="/despre.html" data-i18n="nav.about">Despre</a></li>
+                        <li><a href="/stiri.html" data-i18n="nav.news">Știri</a></li>
+                        <li><a href="/evenimente.html" data-i18n="nav.events">Evenimente</a></li>
+                        <li><a href="/parohii.html" data-i18n="nav.parishes">Parohii</a></li>
+                        <li><a href="/galerie.html" data-i18n="nav.gallery">Galerie</a></li>
+                        <li><a href="/contact.html" data-i18n="nav.contact">Contact</a></li>
+                    </ul>
+                    
+                    <div class="header-actions">
+                        <button class="lang-switch" aria-label="Schimbă limba" data-lang="en">
+                            <span class="lang-icon">🌐</span>
+                            <span class="lang-text">EN</span>
+                        </button>
+                        <a href="/doneaza.html" class="btn btn-primary btn-small" data-i18n="nav.donate">Donează</a>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero hero-home">
+        <div class="hero-image">
+            <img src="/assets/img/hero-home.jpg" alt="Mitropolia Târgoviștei" loading="eager">
+        </div>
+        <div class="hero-overlay">bE,HF </div>
+        <div class="hero-content">
+            <div class="container">
+                <h1 class="hero-title" data-i18n="home.hero.title">Bine ați venit la Mitropolia Târgoviștei</h1>
+                <p class="hero-subtitle" data-i18n="home.hero.subtitle">Tradiție, credință și comunitate în slujba Domnului</p>
+                <div class="hero-actions">
+                    <a href="/despre.html" class="btn btn-primary" data-i18n="home.hero.cta1">Despre noi</a>
+                    <a href="/evenimente.html" class="btn btn-secondary" data-i18n="home.hero.cta2">Calendar ortodox</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <main id="main-content" role="main">
+        <!-- Welcome Section -->
+        <!-- Welcome Section with Expandable Content -->
+<section class="section welcome-section">
+    <div class="container">
+        <div class="section-header">
+            <h2 data-i18n="home.welcome.title">Mesaj de bun venit</h2>
+        </div>
+        <div class="content-grid">
+            <div class="content-text">
+                <div id="intro-expandable" class="expandable is-collapsed" aria-live="polite">
+                    <div id="intro-text" class="expandable-content">
+                        <p data-i18n="home.welcome.p1">Mitropolia Târgoviștei este o episcopie a Bisericii Ortodoxe Române, cu o istorie bogată și o misiune spirituală profundă în slujba credincioșilor din județul Dâmbovița și regiunile învecinate.</p>
+                        <p data-i18n="home.welcome.p2">Sub îndrumarea Înaltpreasfințitului Mitropolit, ne dedicăm promovării valorilor creștine ortodoxe, susținerii comunităților parohiale și dezvoltării vieții spirituale a tuturor celor care caută apropierea de Dumnezeu.</p>
+                        <p>De-a lungul veacurilor, Mitropolia a fost un far spiritual pentru comunitatea noastră, îndeplinind cu credincioșie misiunea de a răspândi lumina Evangheliei și de a păstra vie tradiția strămoșească. Prin slujirile zilnice, prin sfintele taine și prin cuvântul pastoral, clericii noștri se dedică întăririi credinței și susținerii spirituale a tuturor celor care trec pragul bisericilor noastre.</p>
+                        <p>Activitățile noastre pastoral-misionare cuprind un spectru larg: de la educația religioasă a copiilor și tinerilor, la asistența socială a celor aflați în nevoi, de la restaurarea monumentelor istorice, la organizarea de pelerinaje și conferințe teologice. Fiecare inițiativă este ghidată de dragostea creștină și de dorința de a sluji comunității cu devotament și responsabilitate.</p>
+                        <p>Vă invităm să faceți parte din familia spirituală a Mitropoliei Târgoviștei, să participați la viața parohială, la slujbele bisericești și la evenimentele noastre. Împreună, în rugăciune și comuniune, putem construi o comunitate mai puternică, mai unită și mai apropiată de Dumnezeu.</p>
+                    </div>
+                    <button 
+                        id="intro-toggle" 
+                        class="btn-toggle" 
+                        aria-controls="intro-text" 
+                        aria-expanded="false"
+                        data-text-more="Arată mai mult"
+                        data-text-less="Arată mai puțin">
+                        Arată mai mult
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="6 9 12 15 18 9"></polyline>
+                        </svg>
+                    </button>
+                </div>
+                <a href="/despre.html" class="link-arrow mt-lg" data-i18n="home.welcome.readMore">Citește mai mult →</a>
+            </div>
+            <div class="content-image">
+                <img src="/assets/img/cathedral.jpg" alt="Catedrala Mitropoliei" loading="lazy">
+            </div>
+        </div>
+    </div>
+</section>
+
+        <!-- Latest News -->
+        <section class="section news-section bg-light">
+            <div class="container">
+                <div class="section-header">
+                    <h2 data-i18n="home.news.title">Știri recente</h2>
+                    <a href="/stiri.html" class="link-arrow" data-i18n="home.news.viewAll">Vezi toate →</a>
+                </div>
+                <div class="card-grid">
+                    <article class="card">
+                        <div class="card-image">
+                            <img src="/assets/img/mitropolie-logo.jpg" alt="" loading="lazy">
+                        </div>
+                        <div class="card-content">
+                            <time class="card-date" datetime="2025-04-15">15 Aprilie 2025</time>
+                            <h3 class="card-title">
+                                <a href="/articol.html">Sărbătorirea Învierii Domnului - Paștele 2025</a>
+                            </h3>
+                            <p class="card-excerpt">Programul slujbelor de Paști și mesajul Înaltpreasfințitului Mitropolit către credincioși...</p>
+                        </div>
+                    </article>
+                    
+                    <article class="card">
+                        <div class="card-image">
+                            <img src="/assets/img/mitropolie-logo.jpg" alt="" loading="lazy">
+                        </div>
+                        <div class="card-content">
+                            <time class="card-date" datetime="2025-03-28">28 Martie 2025</time>
+                            <h3 class="card-title">
+                                <a href="/articol.html">Hirotonie de preot în Catedrala Mitropoliei</a>
+                            </h3>
+                            <p class="card-excerpt">Un nou preot a fost hirotonit pentru slujirea în parohiile Mitropoliei Târgoviștei...</p>
+                        </div>
+                    </article>
+                    
+                    <article class="card">
+                        <div class="card-image">
+                            <img src="/assets/img/mitropolie-logo.jpg" alt="" loading="lazy">
+                        </div>
+                        <div class="card-content">
+                            <time class="card-date" datetime="2025-03-10">10 Martie 2025</time>
+                            <h3 class="card-title">
+                                <a href="/articol.html">Conferință teologică dedicată tinerilor</a>
+                            </h3>
+                            <p class="card-excerpt">Tema acestui an: "Tânărul creștin în societatea contemporană - provocări și responsabilități"...</p>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Upcoming Events -->
+        <section class="section events-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 data-i18n="home.events.title">Evenimente apropiate</h2>
+                    <a href="/evenimente.html" class="link-arrow" data-i18n="home.events.calendar">Calendar complet →</a>
+                </div>
+                <div class="events-list">
+                    <div class="event-item">
+                        <div class="event-date">
+                            <span class="event-day">20</span>
+                            <span class="event-month">APR</span>
+                        </div>
+                        <div class="event-content">
+                            <h3 class="event-title">Duminica Învierii Domnului (Paștile)</h3>
+                            <p class="event-meta">Sărbătoare împărătească • Dezlegare la toate</p>
+                        </div>
+                    </div>
+                    
+                    <div class="event-item">
+                        <div class="event-date">
+                            <span class="event-day">13</span>
+                            <span class="event-month">APR</span>
+                        </div>
+                        <div class="event-content">
+                            <h3 class="event-title">Intrarea Domnului în Ierusalim (Floriile)</h3>
+                            <p class="event-meta">Sărbătoare • Dezlegare la pește</p>
+                        </div>
+                    </div>
+                    
+                    <div class="event-item">
+                        <div class="event-date">
+                            <span class="event-day">08</span>
+                            <span class="event-month">IUN</span>
+                        </div>
+                        <div class="event-content">
+                            <h3 class="event-title">Pogorârea Sfântului Duh (Rusaliile)</h3>
+                            <p class="event-meta">Sărbătoare împărătească • Dezlegare la toate</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="section cta-section">
+            <div class="container">
+                <div class="cta-content">
+                    <h2 data-i18n="home.cta.title">Susține activitățile Mitropoliei</h2>
+                    <p data-i18n="home.cta.description">Contribuția dumneavoastră ajută la restaurarea și întreținerea lăcașurilor sfinte, la susținerea programelor social-filantropice și la dezvoltarea vieții spirituale a comunității.</p>
+                    <a href="/doneaza.html" class="btn btn-large btn-primary" data-i18n="home.cta.button">Donează acum</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer" role="contentinfo">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3 data-i18n="footer.about.title">Mitropolia Târgoviștei</h3>
+                    <p data-i18n="footer.about.text">Mitropolia Târgoviștei servește comunitatea ortodoxă din județul Dâmbovița și regiunile înve cininate, promovând valorile creștine și tradiția ortodoxă.</p>
+                </div>
+                
+                <div class="footer-section">
+                    <h3 data-i18n="footer.links.title">Linkuri rapide</h3>
+                    <ul class="footer-links">
+                        <li><a href="/despre.html" data-i18n="nav.about">Despre</a></li>
+                        <li><a href="/stiri.html" data-i18n="nav.news">Știri</a></li>
+                        <li><a href="/evenimente.html" data-i18n="nav.events">Evenimente</a></li>
+                        <li><a href="/parohii.html" data-i18n="nav.parishes">Parohii</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3 data-i18n="footer.contact.title">Contact</h3>
+                    <address class="footer-address">
+                        <p>Str. Mitropolit Damaschin Coravu nr. 1<br>
+                        Târgoviște, Dâmbovița 130018</p>
+                        <p>Tel: <a href="tel:+40245123456">+40 245 123 456</a></p>
+                        <p>Email: <a href="mailto:contact@mitropolia-targovistei.ro">contact@mitropolia-targovistei.ro</a></p>
+                    </address>
+                </div>
+                
+                <div class="footer-section">
+                    <h3 data-i18n="footer.social.title">Social Media</h3>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook" class="social-link">Facebook</a>
+                        <a href="#" aria-label="YouTube" class="social-link">YouTube</a>
+                        <a href="#" aria-label="Instagram" class="social-link">Instagram</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 <span data-i18n="site.title">Mitropolia Târgoviștei</span>. <span data-i18n="footer.rights">Toate drepturile rezervate.</span></p>
+                <p><a href="/politici.html" data-i18n="footer.privacy">Politică de confidențialitate</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="/assets/js/i18n.js" defer></script>
+    <script src="/assets/js/seo.js" defer></script>
+    <script src="/assets/js/main.js" defer></script>
+</body>
+</html>

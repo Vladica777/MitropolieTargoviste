@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-i18n="meta.contact.title">Contact | Mitropolia Târgoviștei</title>
+    <meta name="description" data-i18n="meta.contact.description" content="Contactați Mitropolia Târgoviștei. Adresă, telefon, email și formular de contact.">
+    
+    <link rel="canonical" href="https://mitropolia-targovistei.ro/contact.html">
+    <link rel="alternate" hreflang="ro" href="https://mitropolia-targovistei.ro/contact.html">
+    <link rel="alternate" hreflang="en" href="https://mitropolia-targovistei.ro/en/contact.html">
+    
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="/assets/css/base.css">
+    <link rel="stylesheet" href="/assets/css/layout.css">
+    <link rel="stylesheet" href="/assets/css/components.css">
+    <link rel="stylesheet" href="/assets/css/themes.css">
+</head>
+<body>
+    <header class="header" role="banner">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <a href="/" aria-label="Mitropolia Târgoviștei - Acasă">
+                        <img src="/assets/img/logo.svg" alt="Mitropolia Târgoviștei" width="60" height="60">
+                        <span class="logo-text" data-i18n="site.title">Mitropolia Târgoviștei</span>
+                    </a>
+                </div>
+                
+                <nav class="main-nav" role="navigation" aria-label="Navigare principală">
+                    <button class="menu-toggle" aria-label="Deschide meniu" aria-expanded="false" aria-controls="main-menu">
+                        <span class="hamburger"></span>
+                    </button>
+                    
+                    <ul class="nav-menu" id="main-menu">
+                        <li><a href="/" data-i18n="nav.home">Acasă</a></li>
+                        <li><a href="/despre.html" data-i18n="nav.about">Despre</a></li>
+                        <li><a href="/stiri.html" data-i18n="nav.news">Știri</a></li>
+                        <li><a href="/evenimente.html" data-i18n="nav.events">Evenimente</a></li>
+                        <li><a href="/parohii.html" data-i18n="nav.parishes">Parohii</a></li>
+                        <li><a href="/galerie.html" data-i18n="nav.gallery">Galerie</a></li>
+                        <li><a href="/contact.html" class="active" data-i18n="nav.contact">Contact</a></li>
+                    </ul>
+                    
+                    <div class="header-actions">
+                        <button class="lang-switch" aria-label="Schimbă limba" data-lang="en">
+                            <span class="lang-icon">🌐</span>
+                            <span class="lang-text">EN</span>
+                        </button>
+                        <a href="/doneaza.html" class="btn btn-primary btn-small" data-i18n="nav.donate">Donează</a>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main id="main-content" role="main">
+        <nav class="breadcrumbs" aria-label="Breadcrumb">
+            <div class="container">
+                <ol itemscope itemtype="https://schema.org/BreadcrumbList">
+                    <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                        <a itemprop="item" href="/"><span itemprop="name" data-i18n="nav.home">Acasă</span></a>
+                        <meta itemprop="position" content="1" />
+                    </li>
+                    <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                        <span itemprop="name" data-i18n="nav.contact">Contact</span>
+                        <meta itemprop="position" content="2" />
+                    </li>
+                </ol>
+            </div>
+        </nav>
+
+        <section class="page-header">
+            <div class="container">
+                <h1 data-i18n="contact.hero.title">Contact</h1>
+                <p class="page-subtitle" data-i18n="contact.hero.subtitle">Contactați Mitropolia Târgoviștei</p>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="container">
+                <div class="contact-layout">
+                    <div class="contact-info">
+                        <h2 data-i18n="contact.info.title">Informații de contact</h2>
+                        
+                        <div class="contact-item">
+                            <h3 data-i18n="contact.info.address">Adresă</h3>
+                            <address>
+                                Str. Mitropolit Damaschin Coravu nr. 1<br>
+                                Târgoviște, Dâmbovița 130018<br>
+                                România
+                            </address>
+                        </div>
+
+                        <div class="contact-item">
+                            <h3 data-i18n="contact.info.phone">Telefon</h3>
+                            <p><a href="tel:+40245123456">+40 245 123 456</a></p>
+                            <p><a href="tel:+40245123457">+40 245 123 457</a> (Fax)</p>
+                        </div>
+
+                        <div class="contact-item">
+                            <h3 data-i18n="contact.info.email">Email</h3>
+                            <p><a href="mailto:contact@mitropolia-targovistei.ro">contact@mitropolia-targovistei.ro</a></p>
+                            <p><a href="mailto:cancelarie@mitropolia-targovistei.ro">cancelarie@mitropolia-targovistei.ro</a></p>
+                        </div>
+
+                        <div class="contact-item">
+                            <h3 data-i18n="contact.info.schedule">Program</h3>
+                            <p data-i18n="contact.info.scheduleText">
+                                <strong>Luni - Vineri:</strong> 09:00 - 17:00<br>
+                                <strong>Sâmbătă:</strong> 09:00 - 13:00<br>
+                                <strong>Duminică:</strong> Închis
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="contact-form-wrapper">
+                        <h2 data-i18n="contact.form.title">Trimite-ne un mesaj</h2>
+                        <p data-i18n="contact.form.description">Completează formularul de mai jos și te vom contacta în cel mai scurt timp posibil.</p>
+                        
+                        <!-- 
+                            NOTĂ: Acesta este un formular static.
+                            Pentru funcționalitate completă, integrează cu:
+                            - Formspree (https://formspree.io/)
+                            - Netlify Forms
+                            - EmailJS
+                            - Backend propriu
+                        -->
+                        <div id="contact-form">
+                            <div class="form-group">
+                                <label for="name" data-i18n="contact.form.name">Nume complet *</label>
+                                <input type="text" id="name" name="name" required class="form-input">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="email" data-i18n="contact.form.email">Email *</label>
+                                <input type="email" id="email" name="email" required class="form-input">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="phone" data-i18n="contact.form.phone">Telefon</label>
+                                <input type="tel" id="phone" name="phone" class="form-input">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="subject" data-i18n="contact.form.subject">Subiect *</label>
+                                <input type="text" id="subject" name="subject" required class="form-input">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="message" data-i18n="contact.form.message">Mesaj *</label>
+                                <textarea id="message" name="message" rows="6" required class="form-textarea"></textarea>
+                            </div>
+
+                            <div class="form-group">
+                                <button type="submit" class="btn btn-primary" id="submit-btn" data-i18n="contact.form.submit">Trimite mesaj</button>
+                            </div>
+
+                            <div id="form-message" class="form-message" style="display:none;"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section map-section bg-light">
+            <div class="container">
+                <h2 data-i18n="contact.map.title">Locație</h2>
+                <div class="map-container">
+                    <!-- Placeholder pentru hartă - integrează Google Maps sau OpenStreetMap -->
+                    <div class="map-placeholder">
+                        <p data-i18n="contact.map.placeholder">Harta va fi afișată aici</p>
+                        <p><small>Integrează Google Maps sau OpenStreetMap pentru afișarea locației</small></p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer" role="contentinfo">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3 data-i18n="footer.about.title">Mitropolia Târgoviștei</h3>
+                    <p data-i18n="footer.about.text">Mitropolia Târgoviștei servește comunitatea ortodoxă din județul Dâmbovița și regiunile învecinate, promovând valorile creștine și tradiția ortodoxă.</p>
+                </div>
+                
+                <div class="footer-section">
+                    <h3 data-i18n="footer.links.title">Linkuri rapide</h3>
+                    <ul class="footer-links">
+                        <li><a href="/despre.html" data-i18n="nav.about">Despre</a></li>
+                        <li><a href="/stiri.html" data-i18n="nav.news">Știri</a></li>
+                        <li><a href="/evenimente.html" data-i18n="nav.events">Evenimente</a></li>
+                        <li><a href="/parohii.html" data-i18n="nav.parishes">Parohii</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3 data-i18n="footer.contact.title">Contact</h3>
+                    <address class="footer-address">
+                        <p>Str. Mitropolit Damaschin Coravu nr. 1<br>
+                        Târgoviște, Dâmbovița 130018</p>
+                        <p>Tel: <a href="tel:+40245123456">+40 245 123 456</a></p>
+                        <p>Email: <a href="mailto:contact@mitropolia-targovistei.ro">contact@mitropolia-targovistei.ro</a></p>
+                    </address>
+                </div>
+                
+                <div class="footer-section">
+                    <h3 data-i18n="footer.social.title">Social Media</h3>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook" class="social-link">Facebook</a>
+                        <a href="#" aria-label="YouTube" class="social-link">YouTube</a>
+                        <a href="#" aria-label="Instagram" class="social-link">Instagram</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 <span data-i18n="site.title">Mitropolia Târgoviștei</span>. <span data-i18n="footer.rights">Toate drepturile rezervate.</span></p>
+                <p><a href="/politici.html" data-i18n="footer.privacy">Politică de confidențialitate</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="/assets/js/i18n.js" defer></script>
+    <script src="/assets/js/seo.js" defer></script>
+    <script src="/assets/js/main.js" defer></script>
+    <script>
+        // Simple contact form handler with mailto fallback
+        document.addEventListener('DOMContentLoaded', function() {
+            const form = document.getElementById('contact-form');
+            const submitBtn = document.getElementById('submit-btn');
+            const formMessage = document.getElementById('form-message');
+            
+            form.addEventListener('submit', function(e) {
+                e.preventDefault();
+                
+                const name = document.getElementById('name').value;
+                const email = document.getElementById('email').value;
+                const phone = document.getElementById('phone').value;
+                const subject = document.getElementById('subject').value;
+                const message = document.getElementById('message').value;
+                
+                // Validare simplă
+                if (!name || !email || !subject || !message) {
+                    showMessage('Vă rugăm să completați toate câmpurile obligatorii.', 'error');
+                    return;
+                }
+                
+                // Mailto fallback
+                const mailtoLink = `mailto:contact@mitropolia-targovistei.ro?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(`Nume: ${name}\nEmail: ${email}\nTelefon: ${phone}\n\nMesaj:\n${message}`)}`;
+                
+                window.location.href = mailtoLink;
+                
+                showMessage('Clientul dvs. de email a fost deschis. Trimiteți mesajul pentru a finaliza.', 'success');
+                
+                // TODO: Integrare cu serviciu de email (Formspree, EmailJS, etc.)
+            });
+            
+            function showMessage(msg, type) {
+                formMessage.textContent = msg;
+                formMessage.className = 'form-message ' + type;
+                formMessage.style.display = 'block';
+                
+                setTimeout(() => {
+                    formMessage.style.display = 'none';
+                }, 5000);
+            }
+        });
+    </script>
+</body>
+</html>

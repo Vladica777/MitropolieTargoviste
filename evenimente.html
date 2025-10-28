@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-i18n="meta.events.title">Calendar Ortodox 2025 - Evenimente | Mitropolia Târgoviștei</title>
+    <meta name="description" data-i18n="meta.events.description" content="Calendar ortodox 2025 cu sărbători împărătești, posturi și evenimente locale. Paștile, Floriile, Rusaliile și alte sărbători importante.">
+    
+    <link rel="canonical" href="https://mitropolia-targovistei.ro/evenimente.html">
+    <link rel="alternate" hreflang="ro" href="https://mitropolia-targovistei.ro/evenimente.html">
+    <link rel="alternate" hreflang="en" href="https://mitropolia-targovistei.ro/en/evenimente.html">
+    
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Calendar Ortodox 2025 - Mitropolia Târgoviștei">
+    <meta property="og:url" content="https://mitropolia-targovistei.ro/evenimente.html">
+    
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="/assets/css/base.css">
+    <link rel="stylesheet" href="/assets/css/layout.css">
+    <link rel="stylesheet" href="/assets/css/components.css">
+    <link rel="stylesheet" href="/assets/css/themes.css">
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [{
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Acasă",
+        "item": "https://mitropolia-targovistei.ro/"
+      },{
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Evenimente",
+        "item": "https://mitropolia-targovistei.ro/evenimente.html"
+      }]
+    }
+    </script>
+</head>
+<body>
+    <header class="header" role="banner">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <a href="/" aria-label="Mitropolia Târgoviștei - Acasă">
+                        <img src="/assets/img/logo.svg" alt="Mitropolia Târgoviștei" width="60" height="60">
+                        <span class="logo-text" data-i18n="site.title">Mitropolia Târgoviștei</span>
+                    </a>
+                </div>
+                
+                <nav class="main-nav" role="navigation" aria-label="Navigare principală">
+                    <button class="menu-toggle" aria-label="Deschide meniu" aria-expanded="false" aria-controls="main-menu">
+                        <span class="hamburger"></span>
+                    </button>
+                    
+                    <ul class="nav-menu" id="main-menu">
+                        <li><a href="/" data-i18n="nav.home">Acasă</a></li>
+                        <li><a href="/despre.html" data-i18n="nav.about">Despre</a></li>
+                        <li><a href="/stiri.html" data-i18n="nav.news">Știri</a></li>
+                        <li><a href="/evenimente.html" class="active" data-i18n="nav.events">Evenimente</a></li>
+                        <li><a href="/parohii.html" data-i18n="nav.parishes">Parohii</a></li>
+                        <li><a href="/galerie.html" data-i18n="nav.gallery">Galerie</a></li>
+                        <li><a href="/contact.html" data-i18n="nav.contact">Contact</a></li>
+                    </ul>
+                    
+                    <div class="header-actions">
+                        <button class="lang-switch" aria-label="Schimbă limba" data-lang="en">
+                            <span class="lang-icon">🌐</span>
+                            <span class="lang-text">EN</span>
+                        </button>
+                        <a href="/doneaza.html" class="btn btn-primary btn-small" data-i18n="nav.donate">Donează</a>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main id="main-content" role="main">
+        <nav class="breadcrumbs" aria-label="Breadcrumb">
+            <div class="container">
+                <ol itemscope itemtype="https://schema.org/BreadcrumbList">
+                    <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                        <a itemprop="item" href="/"><span itemprop="name" data-i18n="nav.home">Acasă</span></a>
+                        <meta itemprop="position" content="1" />
+                    </li>
+                    <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                        <span itemprop="name" data-i18n="nav.events">Evenimente</span>
+                        <meta itemprop="position" content="2" />
+                    </li>
+                </ol>
+            </div>
+        </nav>
+
+        <section class="page-header">
+            <div class="container">
+                <h1 data-i18n="events.hero.title">Calendar Ortodox 2025</h1>
+                <p class="page-subtitle" data-i18n="events.hero.subtitle">Sărbători, posturi și evenimente ale Mitropoliei</p>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="container">
+                <!-- Filters -->
+                <div class="calendar-filters">
+                    <div class="filter-group">
+                        <label for="view-toggle" data-i18n="events.filters.view">Vizualizare:</label>
+                        <div class="button-group" role="group" aria-label="Calendar view">
+                            <button id="view-list" class="btn btn-small active" data-view="list" data-i18n="events.filters.list">Listă</button>
+                            <button id="view-calendar" class="btn btn-small" data-view="calendar" data-i18n="events.filters.calendar">Calendar</button>
+                        </div>
+                    </div>
+
+                    <div class="filter-group">
+                        <label for="type-filter" data-i18n="events.filters.type">Tip:</label>
+                        <select id="type-filter" class="form-select">
+                            <option value="all" data-i18n="events.filters.all">Toate</option>
+                            <option value="sărbătoare împărătească" data-i18n="events.filters.major">Sărbători împărătești</option>
+                            <option value="sărbătoare" data-i18n="events.filters.feast">Sărbători</option>
+                            <option value="post" data-i18n="events.filters.fast">Posturi</option>
+                            <option value="dezlegare" data-i18n="events.filters.dispensation">Dezlegări</option>
+                        </select>
+                    </div>
+
+                    <div class="filter-group">
+                        <label for="month-filter" data-i18n="events.filters.month">Luna:</label>
+                        <select id="month-filter" class="form-select">
+                            <option value="all" data-i18n="events.filters.allMonths">Toate lunile</option>
+                            <option value="0" data-i18n="month.jan">Ianuarie</option>
+                            <option value="1" data-i18n="month.feb">Februarie</option>
+                            <option value="2" data-i18n="month.mar">Martie</option>
+                            <option value="3" data-i18n="month.apr">Aprilie</option>
+                            <option value="4" data-i18n="month.may">Mai</option>
+                            <option value="5" data-i18n="month.jun">Iunie</option>
+                            <option value="6" data-i18n="month.jul">Iulie</option>
+                            <option value="7" data-i18n="month.aug">August</option>
+                            <option value="8" data-i18n="month.sep">Septembrie</option>
+                            <option value="9" data-i18n="month.oct">Octombrie</option>
+                            <option value="10" data-i18n="month.nov">Noiembrie</option>
+                            <option value="11" data-i18n="month.dec">Decembrie</option>
+                        </select>
+                    </div>
+                </div>
+
+                <!-- Calendar View (initially hidden) -->
+                <div id="calendar-view" class="calendar-grid" style="display:none;">
+                    <div class="calendar-header">
+                        <button id="prev-month" class="btn btn-icon" aria-label="Luna precedentă">←</button>
+                        <h2 id="current-month-year"></h2>
+                        <button id="next-month" class="btn btn-icon" aria-label="Luna următoare">→</button>
+                    </div>
+                    <div class="calendar-days-header">
+                        <div class="calendar-day-name" data-i18n="day.sun">D</div>
+                        <div class="calendar-day-name" data-i18n="day.mon">L</div>
+                        <div class="calendar-day-name" data-i18n="day.tue">Ma</div>
+                        <div class="calendar-day-name" data-i18n="day.wed">Mi</div>
+                        <div class="calendar-day-name" data-i18n="day.thu">J</div>
+                        <div class="calendar-day-name" data-i18n="day.fri">V</div>
+                        <div class="calendar-day-name" data-i18n="day.sat">S</div>
+                    </div>
+                    <div id="calendar-days" class="calendar-days"></div>
+                </div>
+
+                <!-- List View -->
+                <div id="list-view" class="events-timeline">
+                    <!-- Events will be loaded here by JavaScript -->
+                </div>
+
+                <!-- Export Button -->
+                <div class="calendar-actions">
+                    <button id="export-ics" class="btn btn-secondary">
+                        <span data-i18n="events.export">📅 Exportă calendar (.ics)</span>
+                    </button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer" role="contentinfo">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3 data-i18n="footer.about.title">Mitropolia Târgoviștei</h3>
+                    <p data-i18n="footer.about.text">Mitropolia Târgoviștei servește comunitatea ortodoxă din județul Dâmbovița și regiunile învecinate, promovând valorile creștine și tradiția ortodoxă.</p>
+                </div>
+                
+                <div class="footer-section">
+                    <h3 data-i18n="footer.links.title">Linkuri rapide</h3>
+                    <ul class="footer-links">
+                        <li><a href="/despre.html" data-i18n="nav.about">Despre</a></li>
+                        <li><a href="/stiri.html" data-i18n="nav.news">Știri</a></li>
+                        <li><a href="/evenimente.html" data-i18n="nav.events">Evenimente</a></li>
+                        <li><a href="/parohii.html" data-i18n="nav.parishes">Parohii</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3 data-i18n="footer.contact.title">Contact</h3>
+                    <address class="footer-address">
+                        <p>Str. Mitropolit Damaschin Coravu nr. 1<br>
+                        Târgoviște, Dâmbovița 130018</p>
+                        <p>Tel: <a href="tel:+40245123456">+40 245 123 456</a></p>
+                        <p>Email: <a href="mailto:contact@mitropolia-targovistei.ro">contact@mitropolia-targovistei.ro</a></p>
+                    </address>
+                </div>
+                
+                <div class="footer-section">
+                    <h3 data-i18n="footer.social.title">Social Media</h3>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook" class="social-link">Facebook</a>
+                        <a href="#" aria-label="YouTube" class="social-link">YouTube</a>
+                        <a href="#" aria-label="Instagram" class="social-link">Instagram</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 <span data-i18n="site.title">Mitropolia Târgoviștei</span>. <span data-i18n="footer.rights">Toate drepturile rezervate.</span></p>
+                <p><a href="/politici.html" data-i18n="footer.privacy">Politică de confidențialitate</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="/assets/js/i18n.js" defer></script>
+    <script src="/assets/js/seo.js" defer></script>
+    <script src="/assets/js/calendar.js" defer></script>
+    <script src="/assets/js/main.js" defer></script>
+</body>
+</html>

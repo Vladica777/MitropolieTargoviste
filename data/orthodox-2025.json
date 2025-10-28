@@ -1,0 +1,240 @@
+[
+  {
+    "date": "2025-01-01",
+    "title": "Sfântul Vasile cel Mare și Anul Nou",
+    "type": "sărbătoare împărătească",
+    "fast": "dezlegare la toate"
+  },
+  {
+    "date": "2025-01-06",
+    "title": "Botezul Domnului (Bobotează)",
+    "type": "sărbătoare împărătească",
+    "fast": "dezlegare la toate"
+  },
+  {
+    "date": "2025-01-07",
+    "title": "Soborul Sfântului Ioan Botezătorul",
+    "type": "sărbătoare",
+    "fast": "dezlegare la toate"
+  },
+  {
+    "date": "2025-01-30",
+    "title": "Sfinții Trei Ierarhi",
+    "type": "sărbătoare",
+    "fast": "dezlegare pește"
+  },
+  {
+    "date": "2025-02-02",
+    "title": "Întâmpinarea Domnului",
+    "type": "sărbătoare împărătească",
+    "fast": "dezlegare la toate"
+  },
+  {
+    "date": "2025-03-10",
+    "title": "Începutul Postului Mare",
+    "type": "post",
+    "fast": "post strict",
+    "description": "Postul Mare durează 48 de zile până la Paști"
+  },
+  {
+    "date": "2025-03-25",
+    "title": "Buna Vestire",
+    "type": "sărbătoare împărătească",
+    "fast": "dezlegare pește"
+  },
+  {
+    "date": "2025-04-13",
+    "title": "Intrarea Domnului în Ierusalim (Floriile)",
+    "type": "sărbătoare",
+    "fast": "dezlegare pește"
+  },
+  {
+    "date": "2025-04-14",
+    "title": "Începutul Săptămânii Patimilor",
+    "type": "post",
+    "fast": "post strict"
+  },
+  {
+    "date": "2025-04-18",
+    "title": "Vinerea Mare",
+    "type": "post",
+    "fast": "post negru"
+  },
+  {
+    "date": "2025-04-19",
+    "title": "Sâmbăta Mare",
+    "type": "post",
+    "fast": "post strict"
+  },
+  {
+    "date": "2025-04-20",
+    "title": "Duminica Învierii Domnului (Paștele)",
+    "type": "sărbătoare împărătească",
+    "fast": "dezlegare la toate",
+    "description": "Cea mai mare sărbătoare creștină"
+  },
+  {
+    "date": "2025-04-21",
+    "title": "Lunea Paștilor",
+    "type": "sărbătoare",
+    "fast": "dezlegare la toate"
+  },
+  {
+    "date": "2025-04-22",
+    "title": "Marțea Paștilor",
+    "type": "sărbătoare",
+    "fast": "dezlegare la toate"
+  },
+  {
+    "date": "2025-04-27",
+    "title": "Duminica Tomii",
+    "type": "sărbătoare",
+    "fast": "dezlegare la toate"
+  },
+  {
+    "date": "2025-05-23",
+    "title": "Sfinții Constantin și Elena",
+    "type": "sărbătoare",
+    "fast": "dezlegare la toate"
+  },
+  {
+    "date": "2025-05-29",
+    "title": "Înălțarea Domnului",
+    "type": "sărbătoare împărătească",
+    "fast": "dezlegare la toate"
+  },
+  {
+    "date": "2025-06-08",
+    "title": "Pogorârea Sfântului Duh (Rusaliile)",
+    "type": "sărbătoare împărătească",
+    "fast": "dezlegare la toate"
+  },
+  {
+    "date": "2025-06-09",
+    "title": "Lunea Rusaliilor",
+    "type": "sărbătoare",
+    "fast": "dezlegare la toate"
+  },
+  {
+    "date": "2025-06-16",
+    "title": "Începutul Postului Sfinților Apostoli Petru și Pavel",
+    "type": "post",
+    "fast": "post cu pește"
+  },
+  {
+    "date": "2025-06-29",
+    "title": "Sfinții Apostoli Petru și Pavel",
+    "type": "sărbătoare",
+    "fast": "dezlegare la toate"
+  },
+  {
+    "date": "2025-07-20",
+    "title": "Sfântul Ilie",
+    "type": "sărbătoare",
+    "fast": "dezlegare pește"
+  },
+  {
+    "date": "2025-08-01",
+    "title": "Începutul Postului Adormirii Maicii Domnului",
+    "type": "post",
+    "fast": "post cu pește"
+  },
+  {
+    "date": "2025-08-06",
+    "title": "Schimbarea la Față a Domnului",
+    "type": "sărbătoare împărătească",
+    "fast": "dezlegare pește"
+  },
+  {
+    "date": "2025-08-15",
+    "title": "Adormirea Maicii Domnului",
+    "type": "sărbătoare împărătească",
+    "fast": "dezlegare la toate"
+  },
+  {
+    "date": "2025-08-29",
+    "title": "Tăierea Capului Sfântului Ioan Botezătorul",
+    "type": "sărbătoare",
+    "fast": "post strict"
+  },
+  {
+    "date": "2025-09-08",
+    "title": "Nașterea Maicii Domnului",
+    "type": "sărbătoare împărătească",
+    "fast": "dezlegare la toate"
+  },
+  {
+    "date": "2025-09-14",
+    "title": "Înălțarea Sfintei Cruci",
+    "type": "sărbătoare împărătească",
+    "fast": "post strict"
+  },
+  {
+    "date": "2025-10-14",
+    "title": "Acoperământul Maicii Domnului",
+    "type": "sărbătoare",
+    "fast": "dezlegare pește"
+  },
+  {
+    "date": "2025-10-26",
+    "title": "Sfântul Dimitrie",
+    "type": "sărbătoare",
+    "fast": "dezlegare pește"
+  },
+  {
+    "date": "2025-11-08",
+    "title": "Soborul Sfinților Arhangheli Mihail și Gavriil",
+    "type": "sărbătoare",
+    "fast": "dezlegare pește"
+  },
+  {
+    "date": "2025-11-15",
+    "title": "Începutul Postului Crăciunului",
+    "type": "post",
+    "fast": "post cu pește",
+    "description": "Postul Crăciunului durează 40 de zile"
+  },
+  {
+    "date": "2025-11-21",
+    "title": "Intrarea în Biserică a Maicii Domnului",
+    "type": "sărbătoare",
+    "fast": "dezlegare pește"
+  },
+  {
+    "date": "2025-11-30",
+    "title": "Sfântul Apostol Andrei",
+    "type": "sărbătoare",
+    "fast": "dezlegare pește"
+  },
+  {
+    "date": "2025-12-06",
+    "title": "Sfântul Nicolae",
+    "type": "sărbătoare",
+    "fast": "dezlegare pește"
+  },
+  {
+    "date": "2025-12-20",
+    "title": "Sfântul Ignatie Teoforul",
+    "type": "sărbătoare",
+    "fast": "dezlegare pește"
+  },
+  {
+    "date": "2025-12-25",
+    "title": "Nașterea Domnului (Crăciunul)",
+    "type": "sărbătoare împărătească",
+    "fast": "dezlegare la toate",
+    "description": "Sărbătoarea Nașterii Domnului nostru Iisus Hristos"
+  },
+  {
+    "date": "2025-12-26",
+    "title": "Soborul Maicii Domnului",
+    "type": "sărbătoare",
+    "fast": "dezlegare la toate"
+  },
+  {
+    "date": "2025-12-27",
+    "title": "Sfântul Ștefan",
+    "type": "sărbătoare",
+    "fast": "dezlegare la toate"
+  }
+]

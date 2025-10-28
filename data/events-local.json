@@ -1,0 +1,36 @@
+[
+  {
+    "date": "2025-05-15",
+    "title": "Conferință teologică pentru tineret",
+    "type": "eveniment local",
+    "location": "Sala de conferințe, Mitropolia Târgoviște",
+    "description": "Conferință dedicată tinerilor cu tema: Tânărul creștin în societatea contemporană"
+  },
+  {
+    "date": "2025-06-20",
+    "title": "Pelerinaj la Mănăstirea Dealul",
+    "type": "pelerinaj",
+    "location": "Mănăstirea Dealul",
+    "description": "Pelerinaj organizat de Mitropolia pentru credincioșii din eparhie"
+  },
+  {
+    "date": "2025-07-10",
+    "title": "Tabără de vară pentru copii",
+    "type": "educație",
+    "location": "Centrul Eparhial",
+    "description": "Tabără de educație religioasă pentru copii 8-14 ani"
+  },
+  {
+    "date": "2025-09-01",
+    "title": "Binecuvântarea școlilor",
+    "type": "eveniment special",
+    "description": "Binecuvântarea școlilor la începutul noului an școlar"
+  },
+  {
+    "date": "2025-10-15",
+    "title": "Festival de muzică psaltică",
+    "type": "cultural",
+    "location": "Catedrala Mitropoliei",
+    "description": "Festival coral cu coruri din întreaga eparhie"
+  }
+]
