@@ -824,3 +824,479 @@
         max-height: 500px;
     }
 }
+
+
+/* Welcome Section - Image stays at top of its container */
+.welcome-section {
+    background-color: var(--color-white);
+    padding: var(--space-xl) 0;
+}
+
+.welcome-section .content-grid {
+    display: grid;
+    gap: var(--space-xl);
+    grid-template-columns: 1fr;
+    align-items: start; /* Aliniază ambele coloane la început */
+}
+
+.welcome-section .content-text {
+    width: 100%;
+    max-width: 100%;
+    overflow: hidden;
+}
+
+/* Hide image on mobile */
+.welcome-section .content-image {
+    display: none;
+}
+
+/* Tablet and above - Show image, keep it at the top */
+@media (min-width: 768px) {
+    .welcome-section {
+        padding: var(--space-2xl) 0;
+    }
+    
+    .welcome-section .content-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: var(--space-2xl);
+        align-items: start; /* IMPORTANT: ambele coloane încep de sus */
+    }
+    
+    /* Show image on tablet and above */
+    .welcome-section .content-image {
+        display: block;
+        width: 100%;
+        max-width: 100%;
+        overflow: hidden;
+        border-radius: var(--radius-md);
+        /* NO position: sticky - imaginea rămâne natural în grid */
+    }
+    
+    .welcome-section .content-image img {
+        width: 100%;
+        height: auto;
+        display: block;
+        border-radius: var(--radius-md);
+        object-fit: cover;
+        max-height: 400px;
+    }
+}
+
+/* Desktop */
+@media (min-width: 1024px) {
+    .welcome-section {
+        padding: var(--space-3xl) 0;
+    }
+    
+    .welcome-section .content-grid {
+        grid-template-columns: 1.2fr 0.8fr;
+        gap: var(--space-3xl);
+        align-items: start; /* Menține alinierea la început */
+    }
+    
+    .welcome-section .content-image img {
+        max-height: 500px;
+    }
+}
+
+/* Large Desktop */
+@media (min-width: 1440px) {
+    .welcome-section .content-image img {
+        max-height: 550px;
+    }
+}
+
+/* Extra Large Desktop - prevent image from being too tall */
+@media (min-width: 1920px) {
+    .welcome-section .content-image img {
+        max-height: 600px;
+    }
+}
+
+
+
+/* ==========================================================================
+   HERO SECTION WITH VIDEO BACKGROUND
+   ========================================================================== */
+
+/* Hero Section */
+.hero {
+    position: relative;
+    min-height: 500px;
+    height: 100vh; /* Full viewport height */
+    max-height: 800px; /* Prevent being too tall on large screens */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.hero-home {
+    min-height: 600px;
+}
+
+/* Video Container */
+.hero-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    overflow: hidden;
+}
+
+/* Video Element - CRITICAL for proper display */
+.hero-video-element {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    object-fit: cover; /* IMPORTANT: Covers area without stretching */
+    z-index: 1;
+}
+
+/* Fallback for old hero-image class (if still used) */
+.hero-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+.hero-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Overlay - slightly darker for better text readability */
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        to bottom, 
+        rgba(15, 30, 58, 0.6), 
+        rgba(15, 30, 58, 0.4)
+    );
+    z-index: 2;
+}
+
+/* Content */
+.hero-content {
+    position: relative;
+    z-index: 3;
+    text-align: center;
+    color: var(--color-white);
+    padding: var(--space-2xl) var(--space-md);
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.hero-title {
+    font-size: var(--text-4xl);
+    font-weight: 700;
+    color: var(--color-white);
+    margin-bottom: var(--space-lg);
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+    line-height: 1.2;
+}
+
+.hero-subtitle {
+    font-size: var(--text-xl);
+    margin-bottom: var(--space-2xl);
+    opacity: 0.95;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+    line-height: 1.5;
+}
+
+/* Hero Actions - Enhanced Styling with Mobile Optimization */
+.hero-actions {
+    display: flex;
+    gap: var(--space-md);
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: var(--space-xl);
+    width: 100%;
+}
+
+.hero-actions .btn {
+    min-width: 200px;
+    font-weight: 600;
+    letter-spacing: 0.3px;
+}
+
+/* Primary button in hero - Auriu */
+.hero-actions .btn-primary {
+    background-color: var(--color-accent);
+    border-color: var(--color-accent);
+    box-shadow: 0 4px 14px rgba(212, 175, 55, 0.4);
+}
+
+.hero-actions .btn-primary:hover {
+    background-color: #E5C158; /* Auriu deschis */
+    border-color: #E5C158;
+    color: var(--color-white);
+    box-shadow: 0 6px 20px rgba(229, 193, 88, 0.5);
+}
+
+/* Secondary button in hero - White outline */
+.hero-actions .btn-secondary {
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 2px solid rgba(255, 255, 255, 0.9);
+    color: var(--color-white);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.2);
+}
+
+.hero-actions .btn-secondary:hover {
+    background-color: var(--color-white);
+    border-color: var(--color-white);
+    color: var(--color-dark-blue);
+    box-shadow: 0 6px 20px rgba(255, 255, 255, 0.4);
+}
+
+/* ========================================================================
+   MOBILE OPTIMIZATION - Smaller & Centered
+   ======================================================================== */
+
+/* Small Mobile (320px - 374px) */
+@media (max-width: 374px) {
+    .hero-actions {
+        flex-direction: column;
+        gap: 0.625rem; /* 10px */
+        padding: 0 var(--space-md);
+        margin-top: var(--space-lg);
+    }
+    
+    .hero-actions .btn {
+        width: 100%;
+        max-width: 240px; /* Mai mic */
+        min-width: auto;
+        padding: 0.625rem 1rem;
+        font-size: 0.8125rem; /* 13px */
+    }
+}
+
+/* Mobile (375px - 767px) */
+@media (min-width: 375px) and (max-width: 767px) {
+    .hero-actions {
+        flex-direction: column;
+        gap: 0.75rem; /* 12px */
+        padding: 0 var(--space-lg);
+        margin-top: var(--space-lg);
+    }
+    
+    .hero-actions .btn {
+        width: 100%;
+        max-width: 260px; /* Mai mic decât înainte */
+        min-width: auto;
+        padding: 0.625rem 1rem;
+        font-size: 0.875rem; /* 14px */
+    }
+}
+
+/* Tablet Portrait (768px - 1023px) */
+@media (min-width: 768px) and (max-width: 1023px) {
+    .hero-actions {
+        gap: var(--space-md);
+        margin-top: var(--space-xl);
+    }
+    
+    .hero-actions .btn {
+        min-width: 180px;
+        padding: 0.875rem 1.75rem;
+        font-size: 0.9375rem;
+    }
+}
+
+/* Desktop (1024px+) */
+@media (min-width: 1024px) {
+    .hero-actions {
+        gap: var(--space-lg);
+        margin-top: var(--space-2xl);
+    }
+    
+    .hero-actions .btn {
+        min-width: 200px;
+        padding: 1rem 2.5rem;
+    }
+}
+
+/* Landscape orientation on mobile */
+@media (max-width: 767px) and (orientation: landscape) {
+    .hero-actions {
+        flex-direction: row;
+        gap: var(--space-sm);
+        margin-top: var(--space-md);
+    }
+    
+    .hero-actions .btn {
+        max-width: 200px;
+        padding: 0.5rem 1rem;
+        font-size: 0.8125rem;
+    }
+}
+
+/* ========================================================================
+   RESPONSIVE HERO VIDEO
+   ======================================================================== */
+
+/* Mobile Portrait */
+@media (max-width: 767px) {
+    .hero {
+        min-height: 500px;
+        height: 100vh;
+        max-height: 700px;
+    }
+    
+    .hero-home {
+        min-height: 550px;
+    }
+    
+    .hero-title {
+        font-size: var(--text-2xl);
+    }
+    
+    .hero-subtitle {
+        font-size: var(--text-base);
+    }
+    
+    .hero-content {
+        padding: var(--space-xl) var(--space-md);
+    }
+    
+    .hero-actions {
+        flex-direction: column;
+        gap: var(--space-sm);
+    }
+    
+    .hero-actions .btn {
+        width: 100%;
+        max-width: 300px;
+    }
+}
+
+/* Mobile Landscape */
+@media (max-width: 767px) and (orientation: landscape) {
+    .hero {
+        min-height: 400px;
+        height: 100vh;
+        max-height: 500px;
+    }
+    
+    .hero-title {
+        font-size: var(--text-xl);
+        margin-bottom: var(--space-md);
+    }
+    
+    .hero-subtitle {
+        font-size: var(--text-sm);
+        margin-bottom: var(--space-lg);
+    }
+    
+    .hero-content {
+        padding: var(--space-lg) var(--space-md);
+    }
+}
+
+/* Tablet */
+@media (min-width: 768px) {
+    .hero {
+        min-height: 600px;
+        max-height: 850px;
+    }
+    
+    .hero-home {
+        min-height: 650px;
+    }
+    
+    .hero-title {
+        font-size: var(--text-5xl);
+    }
+    
+    .hero-subtitle {
+        font-size: var(--text-xl);
+    }
+}
+
+/* Desktop */
+@media (min-width: 1024px) {
+    .hero {
+        max-height: 900px;
+    }
+    
+    .hero-title {
+        font-size: var(--text-6xl);
+    }
+    
+    .hero-subtitle {
+        font-size: var(--text-2xl);
+    }
+}
+
+/* Large Desktop */
+@media (min-width: 1440px) {
+    .hero {
+        max-height: 950px;
+    }
+}
+
+/* Ultra-wide screens */
+@media (min-width: 1920px) {
+    .hero {
+        max-height: 1000px;
+    }
+    
+    .hero-video-element {
+        /* Ensure video covers ultra-wide screens */
+        min-width: 100%;
+    }
+}
+
+/* ========================================================================
+   VIDEO PERFORMANCE & ACCESSIBILITY
+   ======================================================================== */
+
+/* Pause video on reduced motion preference */
+@media (prefers-reduced-motion: reduce) {
+    .hero-video-element {
+        animation: none;
+    }
+}
+
+/* Prefers reduced data - show poster only */
+@media (prefers-reduced-data: reduce) {
+    .hero-video-element {
+        display: none;
+    }
+    
+    .hero-video::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: url('/assets/img/hero-poster.jpg') center/cover no-repeat;
+        z-index: 1;
+    }
+}
+
+/* High contrast mode */
+@media (prefers-contrast: high) {
+    .hero-overlay {
+        background: rgba(15, 30, 58, 0.8);
+    }
+}

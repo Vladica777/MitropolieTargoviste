@@ -167,3 +167,66 @@
     };
 
 })();
+
+
+/* ==========================================================================
+   HERO VIDEO CONTROL
+   ========================================================================== */
+
+(function() {
+    'use strict';
+
+    document.addEventListener('DOMContentLoaded', function() {
+        initHeroVideo();
+    });
+
+    /**
+     * Initialize hero video
+     */
+    function initHeroVideo() {
+        const video = document.querySelector('.hero-video-element');
+        
+        if (!video) return;
+
+        // Force play on load (some browsers block autoplay)
+        video.play().catch(function(error) {
+            console.log('Video autoplay failed:', error);
+        });
+
+        // Pause video when not in viewport (performance)
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    video.play();
+                } else {
+                    video.pause();
+                }
+            });
+        }, { threshold: 0.25 });
+
+        observer.observe(video);
+
+        // Load lighter version on mobile
+        if (window.innerWidth < 768) {
+            const mobileSource = video.querySelector('source[type="video/mp4"]');
+            if (mobileSource) {
+                const originalSrc = mobileSource.src;
+                const mobileSrc = originalSrc.replace('.mp4', '-mobile.mp4');
+                
+                // Check if mobile version exists
+                fetch(mobileSrc, { method: 'HEAD' })
+                    .then(response => {
+                        if (response.ok) {
+                            mobileSource.src = mobileSrc;
+                            video.load();
+                        }
+                    })
+                    .catch(() => {
+                        // Keep original video
+                    });
+            }
+        }
+    }
+
+})();
+

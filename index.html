@@ -123,23 +123,52 @@
 
     <!-- Main Content -->
     <main role="main">
-        <!-- Hero Section -->
-        <section class="hero hero-home">
-            <div class="hero-image">
-                <img src="/assets/img/hero-home.jpg" alt="Catedrala Mitropoliei Târgoviștei" loading="eager">
+        <!-- Hero Section with Video Background -->
+<section class="hero hero-home">
+    <!-- Video Background -->
+    <div class="hero-video">
+    <video 
+        class="hero-video-element" 
+        autoplay 
+        muted 
+        loop 
+        playsinline
+        poster="/assets/img/hero-poster.jpg">
+        <!-- MP4 PRIMUL - cel mai compatibil -->
+        <source src="/assets/video/video-drona.mp4" type="video/mp4">
+        <!-- WebM pentru browsere moderne -->
+        <source src="/assets/video/video-drona.webm" type="video/webm">
+        <!-- Fallback pentru browsere care nu suportă video -->
+        <img src="/assets/img/cathedral.jpg" alt="Catedrala Mitropoliei Târgoviștei">
+    </video>
+</div>
+    
+    <!-- Video Overlay -->
+    <div class="hero-overlay"></div>
+    
+    <!-- Content -->
+    <div class="container">
+        <div class="hero-content">
+            <h1 class="hero-title" data-i18n="home.hero.title">Bine ați venit la Mitropolia Târgoviștei</h1>
+            <p class="hero-subtitle" data-i18n="home.hero.subtitle">Tradiție, credință și comunitate în slujba Domnului</p>
+            <div class="hero-actions">
+                <a href="/despre.html" class="btn btn-primary" data-i18n="home.hero.cta1">Despre noi</a>
+                <a href="/evenimente.html" class="btn btn-secondary" data-i18n="home.hero.cta2">Calendar ortodox</a>
             </div>
-            <div class="hero-overlay"></div>
-            <div class="container">
-                <div class="hero-content">
-                    <h1 class="hero-title" data-i18n="home.hero.title">Bine ați venit la Mitropolia Târgoviștei</h1>
-                    <p class="hero-subtitle" data-i18n="home.hero.subtitle">Tradiție, credință și comunitate în slujba Domnului</p>
-                    <div class="hero-actions">
-                        <a href="/despre.html" class="btn btn-primary" data-i18n="home.hero.cta1">Despre noi</a>
-                        <a href="/evenimente.html" class="btn btn-secondary" data-i18n="home.hero.cta2">Calendar ortodox</a>
-                    </div>
-                </div>
-            </div>
-        </section>
+        </div>
+    </div>
+    
+    <!-- Optional: Video Controls (Pause/Play) -->
+    <button class="hero-video-control" id="videoControl" aria-label="Pause video">
+        <svg class="icon-pause" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <rect x="6" y="4" width="4" height="16"></rect>
+            <rect x="14" y="4" width="4" height="16"></rect>
+        </svg>
+        <svg class="icon-play" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="display:none;">
+            <polygon points="5 3 19 12 5 21 5 3"></polygon>
+        </svg>
+    </button>
+</section>
 
         <!-- Welcome Section with Expandable Content -->
 <section class="section welcome-section">
@@ -196,7 +225,7 @@
                     <article class="news-card">
                         <a href="/articol.html" class="news-card-link">
                             <div class="news-card-image">
-                                <img src="/assets/img/news1.jpg" alt="Slujbă arhierească" loading="lazy" width="400" height="250">
+                                <img src="/assets/img/gallery/slujba-stire.jpg" alt="Slujbă arhierească" loading="lazy" width="400" height="250">
                             </div>
                             <div class="news-card-content">
                                 <div class="news-card-meta">
@@ -213,7 +242,7 @@
                     <article class="news-card">
                         <a href="/articol.html" class="news-card-link">
                             <div class="news-card-image">
-                                <img src="/assets/img/news2.jpg" alt="Ajutoare sociale" loading="lazy" width="400" height="250">
+                                <img src="/assets/img/gallery/asistenta-sociala-stire.jpg" alt="Ajutoare sociale" loading="lazy" width="400" height="250">
                             </div>
                             <div class="news-card-content">
                                 <div class="news-card-meta">
@@ -230,7 +259,7 @@
                     <article class="news-card">
                         <a href="/articol.html" class="news-card-link">
                             <div class="news-card-image">
-                                <img src="/assets/img/news3.jpg" alt="Restaurare biserică" loading="lazy" width="400" height="250">
+                                <img src="/assets/img/gallery/sf-nicolae-stire.jpg" alt="Restaurare biserică" loading="lazy" width="400" height="250">
                             </div>
                             <div class="news-card-content">
                                 <div class="news-card-meta">

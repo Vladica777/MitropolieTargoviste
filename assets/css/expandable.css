@@ -10,7 +10,7 @@
 
 .expandable-content {
     overflow: hidden;
-    transition: max-height 0.4s ease, opacity 0.3s ease;
+    transition: max-height 0.5s ease, opacity 0.3s ease;
     width: 100%;
     word-wrap: break-word;
     overflow-wrap: break-word;
@@ -23,8 +23,9 @@
     max-width: 100%;
 }
 
+/* Collapsed state - approximately 10 lines */
 .expandable.is-collapsed .expandable-content {
-    max-height: 5rem; /* Redus pentru mobile */
+    max-height: 18rem; /* ~10 lines at 1.8 line-height */
     position: relative;
 }
 
@@ -34,7 +35,7 @@
     bottom: 0;
     left: 0;
     right: 0;
-    height: 2.5rem;
+    height: 4rem;
     background: linear-gradient(to bottom, transparent, var(--color-background));
     pointer-events: none;
 }
@@ -112,17 +113,17 @@
     justify-content: center;
     gap: var(--space-xs);
     margin-top: var(--space-sm);
-    padding: 0.625rem 1rem; /* 10px 16px */
+    padding: 0.625rem 1rem;
     background: transparent;
     border: 1px solid var(--color-accent);
     color: var(--color-accent);
     font-weight: 500;
     border-radius: var(--radius-md);
     cursor: pointer;
-    transition: var(--transition-fast);
+    transition: all 0.3s ease;
     font-family: var(--font-body);
-    font-size: 0.875rem; /* 14px */
-    width: 100%; /* Full width pe mobile */
+    font-size: 0.875rem;
+    width: 100%;
     max-width: 100%;
     text-align: center;
 }
@@ -130,6 +131,7 @@
 .btn-toggle:hover {
     background-color: var(--color-accent);
     color: var(--color-white);
+    transform: translateY(-2px);
 }
 
 .btn-toggle:focus {
@@ -149,8 +151,14 @@
     flex-shrink: 0;
 }
 
-.expandable.is-expanded .btn-toggle svg {
-    transform: rotate(180deg);
+/* Hide button when expanded */
+.expandable.is-expanded .btn-toggle {
+    opacity: 0;
+    pointer-events: none;
+    margin: 0;
+    padding: 0;
+    height: 0;
+    overflow: hidden;
 }
 
 /* Progressive Gallery Styles */
@@ -275,12 +283,12 @@
 /* Small Mobile (320px - 374px) */
 @media (max-width: 374px) {
     .expandable.is-collapsed .expandable-content {
-        max-height: 4.5rem;
+        max-height: 16rem; /* ~9 lines */
     }
     
     .btn-toggle {
         padding: 0.5rem 0.75rem;
-        font-size: 0.8125rem; /* 13px */
+        font-size: 0.8125rem;
     }
     
     .btn-toggle svg {
@@ -305,7 +313,7 @@
 /* Mobile (375px - 767px) */
 @media (min-width: 375px) and (max-width: 767px) {
     .expandable.is-collapsed .expandable-content {
-        max-height: 5rem;
+        max-height: 18rem; /* ~10 lines */
     }
     
     .btn-toggle {
@@ -326,7 +334,7 @@
 /* Tablet (768px - 1023px) */
 @media (min-width: 768px) {
     .expandable.is-collapsed .expandable-content {
-        max-height: 6rem;
+        max-height: 18rem; /* ~10 lines */
     }
     
     .btn-toggle {
@@ -381,6 +389,10 @@
 
 /* Desktop (1024px+) */
 @media (min-width: 1024px) {
+    .expandable.is-collapsed .expandable-content {
+        max-height: 19rem; /* ~10 lines */
+    }
+    
     .gallery-grid {
         grid-template-columns: repeat(4, 1fr);
         gap: var(--space-lg);
@@ -394,7 +406,7 @@
 /* Large Desktop (1440px+) */
 @media (min-width: 1440px) {
     .expandable.is-collapsed .expandable-content {
-        max-height: 6.5rem;
+        max-height: 20rem; /* ~10 lines */
     }
 }
 
@@ -434,7 +446,7 @@
 /* Landscape orientation on mobile */
 @media (max-width: 767px) and (orientation: landscape) {
     .expandable.is-collapsed .expandable-content {
-        max-height: 4rem;
+        max-height: 14rem;
     }
     
     .btn-toggle {
