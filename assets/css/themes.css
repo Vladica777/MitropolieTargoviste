@@ -54,6 +54,9 @@
     }
 }
 
+
+
+
 /* Navigation */
 .main-nav {
     display: flex;
@@ -155,7 +158,8 @@
     color: var(--color-accent);
 }
 
-@media (min-width: 1024px) {
+/* SCHIMBAT: 1024px → 1250px */
+@media (min-width: 1250px) {
     .menu-toggle {
         display: none;
     }
@@ -286,7 +290,8 @@
     }
 }
 
-@media (min-width: 1024px) {
+/* SCHIMBAT: 1024px → 1250px */
+@media (min-width: 1250px) {
     .hero-title {
         font-size: var(--text-6xl);
     }
@@ -389,7 +394,8 @@
     }
 }
 
-@media (min-width: 1024px) {
+/* SCHIMBAT: 1024px → 1250px */
+@media (min-width: 1250px) {
     .footer-content {
         grid-template-columns: repeat(4, 1fr);
     }
@@ -611,7 +617,8 @@
     gap: var(--space-3xl);
 }
 
-@media (min-width: 1024px) {
+/* SCHIMBAT: 1024px → 1250px */
+@media (min-width: 1250px) {
     .contact-layout {
         grid-template-columns: 1fr 1fr;
     }
@@ -777,19 +784,7 @@
 }
 
 .welcome-section .content-image {
-    width: 100%;
-    max-width: 100%;
-    overflow: hidden;
-    border-radius: var(--radius-md);
-}
-
-.welcome-section .content-image img {
-    width: 100%;
-    height: auto;
-    display: block;
-    border-radius: var(--radius-md);
-    object-fit: cover;
-    max-height: 300px;
+    display: none;
 }
 
 /* Tablet and above */
@@ -801,75 +796,15 @@
     .welcome-section .content-grid {
         grid-template-columns: 1fr 1fr;
         gap: var(--space-2xl);
-        align-items: center;
+        align-items: start;
     }
     
-    .welcome-section .content-image img {
-        max-height: 400px;
-    }
-}
-
-/* Desktop */
-@media (min-width: 1024px) {
-    .welcome-section {
-        padding: var(--space-3xl) 0;
-    }
-    
-    .welcome-section .content-grid {
-        grid-template-columns: 1.2fr 0.8fr;
-        gap: var(--space-3xl);
-    }
-    
-    .welcome-section .content-image img {
-        max-height: 500px;
-    }
-}
-
-
-/* Welcome Section - Image stays at top of its container */
-.welcome-section {
-    background-color: var(--color-white);
-    padding: var(--space-xl) 0;
-}
-
-.welcome-section .content-grid {
-    display: grid;
-    gap: var(--space-xl);
-    grid-template-columns: 1fr;
-    align-items: start; /* Aliniază ambele coloane la început */
-}
-
-.welcome-section .content-text {
-    width: 100%;
-    max-width: 100%;
-    overflow: hidden;
-}
-
-/* Hide image on mobile */
-.welcome-section .content-image {
-    display: none;
-}
-
-/* Tablet and above - Show image, keep it at the top */
-@media (min-width: 768px) {
-    .welcome-section {
-        padding: var(--space-2xl) 0;
-    }
-    
-    .welcome-section .content-grid {
-        grid-template-columns: 1fr 1fr;
-        gap: var(--space-2xl);
-        align-items: start; /* IMPORTANT: ambele coloane încep de sus */
-    }
-    
-    /* Show image on tablet and above */
     .welcome-section .content-image {
         display: block;
         width: 100%;
         max-width: 100%;
         overflow: hidden;
         border-radius: var(--radius-md);
-        /* NO position: sticky - imaginea rămâne natural în grid */
     }
     
     .welcome-section .content-image img {
@@ -882,8 +817,8 @@
     }
 }
 
-/* Desktop */
-@media (min-width: 1024px) {
+/* Desktop - SCHIMBAT: 1024px → 1250px */
+@media (min-width: 1250px) {
     .welcome-section {
         padding: var(--space-3xl) 0;
     }
@@ -891,7 +826,7 @@
     .welcome-section .content-grid {
         grid-template-columns: 1.2fr 0.8fr;
         gap: var(--space-3xl);
-        align-items: start; /* Menține alinierea la început */
+        align-items: start;
     }
     
     .welcome-section .content-image img {
@@ -906,14 +841,12 @@
     }
 }
 
-/* Extra Large Desktop - prevent image from being too tall */
+/* Extra Large Desktop */
 @media (min-width: 1920px) {
     .welcome-section .content-image img {
         max-height: 600px;
     }
 }
-
-
 
 /* ==========================================================================
    HERO SECTION WITH VIDEO BACKGROUND
@@ -923,8 +856,8 @@
 .hero {
     position: relative;
     min-height: 500px;
-    height: 100vh; /* Full viewport height */
-    max-height: 800px; /* Prevent being too tall on large screens */
+    height: 100vh;
+    max-height: 800px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -946,7 +879,7 @@
     overflow: hidden;
 }
 
-/* Video Element - CRITICAL for proper display */
+/* Video Element */
 .hero-video-element {
     position: absolute;
     top: 50%;
@@ -956,11 +889,11 @@
     min-height: 100%;
     width: auto;
     height: auto;
-    object-fit: cover; /* IMPORTANT: Covers area without stretching */
+    object-fit: cover;
     z-index: 1;
 }
 
-/* Fallback for old hero-image class (if still used) */
+/* Fallback for old hero-image class */
 .hero-image {
     position: absolute;
     top: 0;
@@ -976,7 +909,7 @@
     object-fit: cover;
 }
 
-/* Overlay - slightly darker for better text readability */
+/* Overlay */
 .hero-overlay {
     position: absolute;
     top: 0;
@@ -1019,7 +952,7 @@
     line-height: 1.5;
 }
 
-/* Hero Actions - Enhanced Styling with Mobile Optimization */
+/* Hero Actions */
 .hero-actions {
     display: flex;
     gap: var(--space-md);
@@ -1036,7 +969,7 @@
     letter-spacing: 0.3px;
 }
 
-/* Primary button in hero - Auriu */
+/* Primary button in hero */
 .hero-actions .btn-primary {
     background-color: var(--color-accent);
     border-color: var(--color-accent);
@@ -1044,13 +977,13 @@
 }
 
 .hero-actions .btn-primary:hover {
-    background-color: #E5C158; /* Auriu deschis */
+    background-color: #E5C158;
     border-color: #E5C158;
     color: var(--color-white);
     box-shadow: 0 6px 20px rgba(229, 193, 88, 0.5);
 }
 
-/* Secondary button in hero - White outline */
+/* Secondary button in hero */
 .hero-actions .btn-secondary {
     background-color: rgba(255, 255, 255, 0.1);
     border: 2px solid rgba(255, 255, 255, 0.9);
@@ -1067,48 +1000,43 @@
     box-shadow: 0 6px 20px rgba(255, 255, 255, 0.4);
 }
 
-/* ========================================================================
-   MOBILE OPTIMIZATION - Smaller & Centered
-   ======================================================================== */
-
-/* Small Mobile (320px - 374px) */
+/* Mobile Optimization */
 @media (max-width: 374px) {
     .hero-actions {
         flex-direction: column;
-        gap: 0.625rem; /* 10px */
+        gap: 0.625rem;
         padding: 0 var(--space-md);
         margin-top: var(--space-lg);
     }
     
     .hero-actions .btn {
         width: 100%;
-        max-width: 240px; /* Mai mic */
+        max-width: 240px;
         min-width: auto;
         padding: 0.625rem 1rem;
-        font-size: 0.8125rem; /* 13px */
+        font-size: 0.8125rem;
     }
 }
 
-/* Mobile (375px - 767px) */
 @media (min-width: 375px) and (max-width: 767px) {
     .hero-actions {
         flex-direction: column;
-        gap: 0.75rem; /* 12px */
+        gap: 0.75rem;
         padding: 0 var(--space-lg);
         margin-top: var(--space-lg);
     }
     
     .hero-actions .btn {
         width: 100%;
-        max-width: 260px; /* Mai mic decât înainte */
+        max-width: 260px;
         min-width: auto;
         padding: 0.625rem 1rem;
-        font-size: 0.875rem; /* 14px */
+        font-size: 0.875rem;
     }
 }
 
-/* Tablet Portrait (768px - 1023px) */
-@media (min-width: 768px) and (max-width: 1023px) {
+/* SCHIMBAT: 768px - 1023px → 768px - 1249px */
+@media (min-width: 768px) and (max-width: 1249px) {
     .hero-actions {
         gap: var(--space-md);
         margin-top: var(--space-xl);
@@ -1121,8 +1049,8 @@
     }
 }
 
-/* Desktop (1024px+) */
-@media (min-width: 1024px) {
+/* SCHIMBAT: 1024px+ → 1250px+ */
+@media (min-width: 1250px) {
     .hero-actions {
         gap: var(--space-lg);
         margin-top: var(--space-2xl);
@@ -1134,7 +1062,6 @@
     }
 }
 
-/* Landscape orientation on mobile */
 @media (max-width: 767px) and (orientation: landscape) {
     .hero-actions {
         flex-direction: row;
@@ -1149,11 +1076,7 @@
     }
 }
 
-/* ========================================================================
-   RESPONSIVE HERO VIDEO
-   ======================================================================== */
-
-/* Mobile Portrait */
+/* Responsive Hero Video */
 @media (max-width: 767px) {
     .hero {
         min-height: 500px;
@@ -1176,19 +1099,8 @@
     .hero-content {
         padding: var(--space-xl) var(--space-md);
     }
-    
-    .hero-actions {
-        flex-direction: column;
-        gap: var(--space-sm);
-    }
-    
-    .hero-actions .btn {
-        width: 100%;
-        max-width: 300px;
-    }
 }
 
-/* Mobile Landscape */
 @media (max-width: 767px) and (orientation: landscape) {
     .hero {
         min-height: 400px;
@@ -1211,7 +1123,6 @@
     }
 }
 
-/* Tablet */
 @media (min-width: 768px) {
     .hero {
         min-height: 600px;
@@ -1231,8 +1142,8 @@
     }
 }
 
-/* Desktop */
-@media (min-width: 1024px) {
+/* SCHIMBAT: 1024px → 1250px */
+@media (min-width: 1250px) {
     .hero {
         max-height: 900px;
     }
@@ -1246,37 +1157,29 @@
     }
 }
 
-/* Large Desktop */
 @media (min-width: 1440px) {
     .hero {
         max-height: 950px;
     }
 }
 
-/* Ultra-wide screens */
 @media (min-width: 1920px) {
     .hero {
         max-height: 1000px;
     }
     
     .hero-video-element {
-        /* Ensure video covers ultra-wide screens */
         min-width: 100%;
     }
 }
 
-/* ========================================================================
-   VIDEO PERFORMANCE & ACCESSIBILITY
-   ======================================================================== */
-
-/* Pause video on reduced motion preference */
+/* Video Performance & Accessibility */
 @media (prefers-reduced-motion: reduce) {
     .hero-video-element {
         animation: none;
     }
 }
 
-/* Prefers reduced data - show poster only */
 @media (prefers-reduced-data: reduce) {
     .hero-video-element {
         display: none;
@@ -1294,7 +1197,6 @@
     }
 }
 
-/* High contrast mode */
 @media (prefers-contrast: high) {
     .hero-overlay {
         background: rgba(15, 30, 58, 0.8);
