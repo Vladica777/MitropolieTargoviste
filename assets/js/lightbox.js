@@ -1,5 +1,5 @@
 /* ==========================================================================
-   LIGHTBOX.JS - Photo Gallery Lightbox with Keyboard & Touch Support
+   LIGHTBOX.JS - Photo Gallery Lightbox with Navigation
    ========================================================================== */
 
 (function() {
@@ -28,54 +28,67 @@
         lightboxCaption = document.getElementById('lightbox-caption');
         lightboxCounter = document.getElementById('lightbox-counter');
 
-        if (!lightbox) return;
-
-        // Get all gallery images
-        const galleryItems = document.querySelectorAll('.gallery-item img');
-        images = Array.from(galleryItems);
-
-        // Add click event to each image
-        images.forEach((img, index) => {
-            img.parentElement.addEventListener('click', function(e) {
-                e.preventDefault();
-                openLightbox(index);
-            });
-
-            // Make gallery items keyboard accessible
-            img.parentElement.setAttribute('tabindex', '0');
-            img.parentElement.setAttribute('role', 'button');
-            img.parentElement.setAttribute('aria-label', `View image: ${img.alt}`);
-
-            img.parentElement.addEventListener('keydown', function(e) {
-                if (e.key === 'Enter' || e.key === ' ') {
-                    e.preventDefault();
-                    openLightbox(index);
-                }
-            });
-        });
+        if (!lightbox) {
+            console.error('Lightbox element not found');
+            return;
+        }
 
         // Setup lightbox controls
         setupLightboxControls();
     }
 
     /**
-     * Open lightbox at specific index
+     * Update images array (called from gallery-progressive.js or manually)
+     */
+    function updateImagesArray() {
+        const galleryItems = document.querySelectorAll('.gallery-item img, .gallery-item-progressive img');
+        images = Array.from(galleryItems);
+        console.log(`Lightbox: ${images.length} images loaded`);
+    }
+
+    /**
+     * Update images array - exposed globally
+     */
+    window.updateLightboxImages = function() {
+        updateImagesArray();
+    };
+
+    /**
+     * Open lightbox at specific index (exposed globally)
+     */
+    window.openLightbox = function(index) {
+        updateImagesArray();
+        
+        if (images.length === 0) {
+            console.error('No images found in gallery');
+            return;
+        }
+        
+        openLightbox(index);
+    };
+
+    /**
+     * Open lightbox at specific index (internal)
      */
     function openLightbox(index) {
-        if (images.length === 0) return;
+        if (images.length === 0 || index < 0 || index >= images.length) {
+            return;
+        }
 
         currentIndex = index;
         updateLightboxContent();
 
         lightbox.style.display = 'flex';
+        lightbox.classList.add('active');
         document.body.style.overflow = 'hidden';
 
-        // Focus trap
+        // Focus management
         trapFocus();
 
         // Set initial focus to close button
         setTimeout(() => {
-            document.querySelector('.lightbox-close').focus();
+            const closeBtn = document.querySelector('.lightbox-close');
+            if (closeBtn) closeBtn.focus();
         }, 100);
     }
 
@@ -84,11 +97,13 @@
      */
     function closeLightbox() {
         lightbox.style.display = 'none';
+        lightbox.classList.remove('active');
         document.body.style.overflow = '';
         
         // Return focus to the thumbnail that was clicked
         if (images[currentIndex]) {
-            images[currentIndex].parentElement.focus();
+            const parent = images[currentIndex].closest('.gallery-item, .gallery-item-progressive');
+            if (parent) parent.focus();
         }
     }
 
@@ -99,15 +114,21 @@
         if (!images[currentIndex]) return;
 
         const img = images[currentIndex];
+        
+        // Update image
         lightboxImage.src = img.src;
-        lightboxImage.alt = img.alt;
+        lightboxImage.alt = img.alt || 'Imagine din galerie';
 
         // Update caption
-        const caption = img.getAttribute('data-caption') || img.alt;
-        lightboxCaption.textContent = caption;
+        const caption = img.getAttribute('data-caption') || img.alt || '';
+        if (lightboxCaption) {
+            lightboxCaption.textContent = caption;
+        }
 
         // Update counter
-        lightboxCounter.textContent = `${currentIndex + 1} / ${images.length}`;
+        if (lightboxCounter) {
+            lightboxCounter.textContent = `${currentIndex + 1} / ${images.length}`;
+        }
 
         // Update navigation button states
         updateNavigationButtons();
@@ -136,6 +157,8 @@
         const prevBtn = document.querySelector('.lightbox-prev');
         const nextBtn = document.querySelector('.lightbox-next');
 
+        if (!prevBtn || !nextBtn) return;
+
         if (images.length <= 1) {
             prevBtn.style.display = 'none';
             nextBtn.style.display = 'none';
@@ -143,6 +166,10 @@
             prevBtn.style.display = 'flex';
             nextBtn.style.display = 'flex';
         }
+
+        // Update aria-disabled
+        prevBtn.setAttribute('aria-disabled', 'false');
+        nextBtn.setAttribute('aria-disabled', 'false');
     }
 
     /**
@@ -158,13 +185,19 @@
         // Previous button
         const prevBtn = document.querySelector('.lightbox-prev');
         if (prevBtn) {
-            prevBtn.addEventListener('click', prevImage);
+            prevBtn.addEventListener('click', function(e) {
+                e.stopPropagation();
+                prevImage();
+            });
         }
 
         // Next button
         const nextBtn = document.querySelector('.lightbox-next');
         if (nextBtn) {
-            nextBtn.addEventListener('click', nextImage);
+            nextBtn.addEventListener('click', function(e) {
+                e.stopPropagation();
+                nextImage();
+            });
         }
 
         // Click overlay to close
@@ -175,7 +208,7 @@
 
         // Keyboard navigation
         document.addEventListener('keydown', function(e) {
-            if (lightbox.style.display !== 'flex') return;
+            if (!lightbox || lightbox.style.display !== 'flex') return;
 
             switch(e.key) {
                 case 'Escape':
@@ -191,10 +224,10 @@
         });
 
         // Touch events for swipe
-        const lightboxContent = document.querySelector('.lightbox-content');
-        if (lightboxContent) {
-            lightboxContent.addEventListener('touchstart', handleTouchStart, { passive: true });
-            lightboxContent.addEventListener('touchend', handleTouchEnd, { passive: true });
+        const lightboxContainer = document.querySelector('.lightbox-container');
+        if (lightboxContainer) {
+            lightboxContainer.addEventListener('touchstart', handleTouchStart, { passive: true });
+            lightboxContainer.addEventListener('touchend', handleTouchEnd, { passive: true });
         }
     }
 
@@ -241,7 +274,8 @@
         const firstFocusable = focusableElements[0];
         const lastFocusable = focusableElements[focusableElements.length - 1];
 
-        lightbox.addEventListener('keydown', function(e) {
+        const handleTabKey = function(e) {
+            if (!lightbox.classList.contains('active')) return;
             if (e.key !== 'Tab') return;
 
             if (e.shiftKey) {
@@ -257,7 +291,30 @@
                     firstFocusable.focus();
                 }
             }
-        });
+        };
+
+        lightbox.addEventListener('keydown', handleTabKey);
     }
+
+    /**
+     * Public API
+     */
+    window.lightboxAPI = {
+        open: function(index) {
+            window.openLightbox(index);
+        },
+        close: function() {
+            closeLightbox();
+        },
+        next: function() {
+            nextImage();
+        },
+        prev: function() {
+            prevImage();
+        },
+        getCurrentIndex: function() {
+            return currentIndex;
+        }
+    };
 
 })();

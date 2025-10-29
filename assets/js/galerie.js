@@ -1,309 +1,4 @@
 /* ==========================================================================
-   LIGHTBOX.JS - Photo Gallery Lightbox with Keyboard & Touch Support
-   ========================================================================== */
-
-(function() {
-    'use strict';
-
-    let currentIndex = 0;
-    let images = [];
-    let lightbox = null;
-    let lightboxImage = null;
-    let lightboxCaption = null;
-    let lightboxCounter = null;
-    let touchStartX = 0;
-    let touchEndX = 0;
-
-    document.addEventListener('DOMContentLoaded', function() {
-        initLightbox();
-    });
-
-    /**
-     * Initialize Lightbox
-     */
-    function initLightbox() {
-        // Get lightbox elements
-        lightbox = document.getElementById('lightbox');
-        lightboxImage = document.getElementById('lightbox-image');
-        lightboxCaption = document.getElementById('lightbox-caption');
-        lightboxCounter = document.getElementById('lightbox-counter');
-
-        if (!lightbox) return;
-
-        // Get all gallery images
-        updateImagesArray();
-
-        // Add click event to each image
-        images.forEach((img, index) => {
-            const parent = img.parentElement;
-            
-            // Skip if already has event listener (progressive gallery handles this)
-            if (parent.classList.contains('gallery-item-progressive')) {
-                return;
-            }
-
-            parent.addEventListener('click', function(e) {
-                e.preventDefault();
-                openLightbox(index);
-            });
-
-            // Make gallery items keyboard accessible
-            parent.setAttribute('tabindex', '0');
-            parent.setAttribute('role', 'button');
-            parent.setAttribute('aria-label', `View image: ${img.alt}`);
-
-            parent.addEventListener('keydown', function(e) {
-                if (e.key === 'Enter' || e.key === ' ') {
-                    e.preventDefault();
-                    openLightbox(index);
-                }
-            });
-        });
-
-        // Setup lightbox controls
-        setupLightboxControls();
-    }
-
-    /**
-     * Update images array (called from gallery-progressive.js or manually)
-     */
-    function updateImagesArray() {
-        const galleryItems = document.querySelectorAll('.gallery-item img, .gallery-item-progressive img');
-        images = Array.from(galleryItems);
-    }
-
-    /**
-     * Update images array - exposed globally
-     */
-    window.updateLightboxImages = function() {
-        updateImagesArray();
-    };
-
-    /**
-     * Open lightbox at specific index (exposed globally)
-     */
-    window.openLightbox = function(index) {
-        updateImagesArray();
-        openLightbox(index);
-    };
-
-    /**
-     * Open lightbox at specific index
-     */
-    function openLightbox(index) {
-        if (images.length === 0) return;
-
-        currentIndex = index;
-        updateLightboxContent();
-
-        lightbox.style.display = 'flex';
-        document.body.style.overflow = 'hidden';
-
-        // Focus trap
-        trapFocus();
-
-        // Set initial focus to close button
-        setTimeout(() => {
-            const closeBtn = document.querySelector('.lightbox-close');
-            if (closeBtn) closeBtn.focus();
-        }, 100);
-    }
-
-    /**
-     * Close lightbox
-     */
-    function closeLightbox() {
-        lightbox.style.display = 'none';
-        document.body.style.overflow = '';
-        
-        // Return focus to the thumbnail that was clicked
-        if (images[currentIndex]) {
-            const parent = images[currentIndex].parentElement;
-            if (parent) parent.focus();
-        }
-    }
-
-    /**
-     * Update lightbox content
-     */
-    function updateLightboxContent() {
-        if (!images[currentIndex]) return;
-
-        const img = images[currentIndex];
-        lightboxImage.src = img.src;
-        lightboxImage.alt = img.alt;
-
-        // Update caption
-        const caption = img.getAttribute('data-caption') || img.alt;
-        if (lightboxCaption) {
-            lightboxCaption.textContent = caption;
-        }
-
-        // Update counter
-        if (lightboxCounter) {
-            lightboxCounter.textContent = `${currentIndex + 1} / ${images.length}`;
-        }
-
-        // Update navigation button states
-        updateNavigationButtons();
-    }
-
-    /**
-     * Navigate to next image
-     */
-    function nextImage() {
-        currentIndex = (currentIndex + 1) % images.length;
-        updateLightboxContent();
-    }
-
-    /**
-     * Navigate to previous image
-     */
-    function prevImage() {
-        currentIndex = (currentIndex - 1 + images.length) % images.length;
-        updateLightboxContent();
-    }
-
-    /**
-     * Update navigation button states
-     */
-    function updateNavigationButtons() {
-        const prevBtn = document.querySelector('.lightbox-prev');
-        const nextBtn = document.querySelector('.lightbox-next');
-
-        if (!prevBtn || !nextBtn) return;
-
-        if (images.length <= 1) {
-            prevBtn.style.display = 'none';
-            nextBtn.style.display = 'none';
-        } else {
-            prevBtn.style.display = 'flex';
-            nextBtn.style.display = 'flex';
-        }
-    }
-
-    /**
-     * Setup lightbox controls
-     */
-    function setupLightboxControls() {
-        // Close button
-        const closeBtn = document.querySelector('.lightbox-close');
-        if (closeBtn) {
-            closeBtn.addEventListener('click', closeLightbox);
-        }
-
-        // Previous button
-        const prevBtn = document.querySelector('.lightbox-prev');
-        if (prevBtn) {
-            prevBtn.addEventListener('click', prevImage);
-        }
-
-        // Next button
-        const nextBtn = document.querySelector('.lightbox-next');
-        if (nextBtn) {
-            nextBtn.addEventListener('click', nextImage);
-        }
-
-        // Click overlay to close
-        const overlay = document.querySelector('.lightbox-overlay');
-        if (overlay) {
-            overlay.addEventListener('click', closeLightbox);
-        }
-
-        // Keyboard navigation
-        document.addEventListener('keydown', function(e) {
-            if (!lightbox || lightbox.style.display !== 'flex') return;
-
-            switch(e.key) {
-                case 'Escape':
-                    closeLightbox();
-                    break;
-                case 'ArrowLeft':
-                    prevImage();
-                    break;
-                case 'ArrowRight':
-                    nextImage();
-                    break;
-            }
-        });
-
-        // Touch events for swipe
-        const lightboxContent = document.querySelector('.lightbox-content');
-        if (lightboxContent) {
-            lightboxContent.addEventListener('touchstart', handleTouchStart, { passive: true });
-            lightboxContent.addEventListener('touchend', handleTouchEnd, { passive: true });
-        }
-    }
-
-    /**
-     * Handle touch start
-     */
-    function handleTouchStart(e) {
-        touchStartX = e.changedTouches[0].screenX;
-    }
-
-    /**
-     * Handle touch end
-     */
-    function handleTouchEnd(e) {
-        touchEndX = e.changedTouches[0].screenX;
-        handleSwipe();
-    }
-
-    /**
-     * Handle swipe gesture
-     */
-    function handleSwipe() {
-        const swipeThreshold = 50;
-        const diff = touchStartX - touchEndX;
-
-        if (Math.abs(diff) > swipeThreshold) {
-            if (diff > 0) {
-                // Swipe left - next image
-                nextImage();
-            } else {
-                // Swipe right - previous image
-                prevImage();
-            }
-        }
-    }
-
-    /**
-     * Trap focus within lightbox
-     */
-    function trapFocus() {
-        const focusableElements = lightbox.querySelectorAll(
-            'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
-        );
-        const firstFocusable = focusableElements[0];
-        const lastFocusable = focusableElements[focusableElements.length - 1];
-
-        const handleTabKey = function(e) {
-            if (e.key !== 'Tab') return;
-
-            if (e.shiftKey) {
-                // Shift + Tab
-                if (document.activeElement === firstFocusable) {
-                    e.preventDefault();
-                    lastFocusable.focus();
-                }
-            } else {
-                // Tab
-                if (document.activeElement === lastFocusable) {
-                    e.preventDefault();
-                    firstFocusable.focus();
-                }
-            }
-        };
-
-        lightbox.addEventListener('keydown', handleTabKey);
-    }
-
-})();
-
-
-
-/* ==========================================================================
    GALLERY-PROGRESSIVE.JS - Progressive Image Loading
    ========================================================================== */
 
@@ -315,21 +10,21 @@
     let currentBreakpoint = 'mobile';
 
     const config = {
-        initialCount: {
-            mobile: 4,
-            tablet: 6,
-            desktop: 8
-        },
-        batchPerClick: {
-            mobile: 2,
-            tablet: 3,
-            desktop: 4
-        },
-        breakpoints: {
-            tablet: 768,
-            desktop: 1024
-        }
-    };
+    initialCount: {
+        mobile: 4,    // 2×2 sau 4×1
+        tablet: 4,    // 2×2 
+        desktop: 6    // 3×2 (redus de la 8)
+    },
+    batchPerClick: {
+        mobile: 4,
+        tablet: 4,
+        desktop: 6    // 3×2 (redus de la 8)
+    },
+    breakpoints: {
+        tablet: 768,
+        desktop: 1024
+    }
+};
 
     document.addEventListener('DOMContentLoaded', function() {
         const galleryGrid = document.getElementById('gallery-grid');
@@ -362,9 +57,26 @@
             galleryData = await response.json();
         } catch (error) {
             console.error('Error loading gallery data:', error);
-            // Fallback to empty array
-            galleryData = [];
+            // Fallback to hardcoded images if JSON fails
+            galleryData = generateFallbackGallery();
         }
+    }
+
+    /**
+     * Generate fallback gallery if JSON fails
+     */
+    function generateFallbackGallery() {
+        const fallback = [];
+        for (let i = 1; i <= 20; i++) {
+            fallback.push({
+                src: `/assets/img/gallery/img${i}.jpg`,
+                alt: `Imagine ${i}`,
+                caption: `Imagine din galerie ${i}`,
+                width: 1200,
+                height: 900
+            });
+        }
+        return fallback;
     }
 
     /**
@@ -405,10 +117,10 @@
             const item = createGalleryItem(image, globalIndex);
             galleryGrid.appendChild(item);
             
-            // Trigger animation with slight delay for stagger effect
+            // Trigger fade-in animation
             setTimeout(() => {
-                item.style.animationDelay = `${index * 50}ms`;
-            }, 10);
+                item.classList.add('fade-in');
+            }, index * 50);
         });
 
         // Update lightbox images array
@@ -425,7 +137,7 @@
         item.className = 'gallery-item gallery-item-progressive';
         item.setAttribute('tabindex', '0');
         item.setAttribute('role', 'button');
-        item.setAttribute('aria-label', `View image: ${imageData.alt || 'Gallery image'}`);
+        item.setAttribute('aria-label', `Vizualizează: ${imageData.alt || 'Imagine din galerie'}`);
         
         const img = document.createElement('img');
         img.src = imageData.src;
@@ -434,20 +146,15 @@
         img.width = imageData.width || 800;
         img.height = imageData.height || 600;
         
-        // Add srcset if available
-        if (imageData.srcset) {
-            img.srcset = imageData.srcset;
-            img.sizes = imageData.sizes || '(min-width: 1024px) 25vw, (min-width: 768px) 33vw, 50vw';
-        }
-        
         // Add data attributes for lightbox
         if (imageData.caption) {
             img.setAttribute('data-caption', imageData.caption);
         }
+        img.setAttribute('data-index', globalIndex);
         
         item.appendChild(img);
         
-        // Add click handler for lightbox (if exists)
+        // Add click handler for lightbox
         item.addEventListener('click', function() {
             openLightboxAtIndex(globalIndex);
         });
@@ -490,6 +197,7 @@
      */
     function loadMoreImages() {
         const moreBtn = document.getElementById('gallery-more');
+        const btnText = moreBtn.querySelector('.btn-text');
         const batchSize = config.batchPerClick[currentBreakpoint];
         const imagesToLoad = galleryData.slice(currentIndex, currentIndex + batchSize);
         
@@ -500,8 +208,7 @@
         
         // Show loading state
         moreBtn.disabled = true;
-        const originalHTML = moreBtn.innerHTML;
-        moreBtn.innerHTML = '<span class="gallery-loading"></span> Se încarcă...';
+        btnText.innerHTML = '<span class="gallery-loading"></span> Se încarcă...';
         
         // Simulate network delay for smooth UX
         setTimeout(() => {
@@ -511,7 +218,6 @@
             
             // Update button
             moreBtn.disabled = false;
-            moreBtn.innerHTML = originalHTML;
             updateMoreButton();
             
             // Announce to screen readers
@@ -527,8 +233,9 @@
      */
     function updateMoreButton() {
         const moreBtn = document.getElementById('gallery-more');
+        const btnText = moreBtn?.querySelector('.btn-text');
         
-        if (!moreBtn) return;
+        if (!moreBtn || !btnText) return;
 
         const remainingImages = galleryData.length - currentIndex;
         
@@ -542,7 +249,7 @@
             moreBtn.setAttribute('aria-disabled', 'false');
             const lang = document.documentElement.lang || 'ro';
             const textMore = lang === 'en' ? 'Load More' : 'Arată mai mult';
-            moreBtn.innerHTML = `${textMore} (${remainingImages})`;
+            btnText.textContent = `${textMore} (${remainingImages})`;
         }
     }
 
@@ -572,19 +279,17 @@
      * Announce images loaded to screen readers
      */
     function announceImagesLoaded(count) {
-        const galleryGrid = document.getElementById('gallery-grid');
-        const lang = document.documentElement.lang || 'ro';
-        
         const announcement = document.createElement('div');
         announcement.setAttribute('role', 'status');
         announcement.setAttribute('aria-live', 'polite');
         announcement.className = 'sr-only';
         
+        const lang = document.documentElement.lang || 'ro';
         announcement.textContent = lang === 'en'
             ? `${count} images loaded.`
             : `${count} imagini încărcate.`;
         
-        galleryGrid.appendChild(announcement);
+        document.body.appendChild(announcement);
         
         // Remove after announcement
         setTimeout(() => {
@@ -626,10 +331,13 @@
         },
         loadMore: function() {
             loadMoreImages();
+        },
+        getLoadedCount: function() {
+            return currentIndex;
+        },
+        getTotalCount: function() {
+            return galleryData.length;
         }
     };
 
 })();
-
-
-

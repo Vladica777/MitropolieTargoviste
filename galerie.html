@@ -3,46 +3,61 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- SEO Meta Tags -->
     <title data-i18n="meta.gallery.title">Galerie Foto | Mitropolia Târgoviștei</title>
     <meta name="description" data-i18n="meta.gallery.description" content="Galerie foto cu imagini din evenimentele și activitățile Mitropoliei Târgoviștei.">
+    <meta name="keywords" content="galerie foto, mitropolia targovistei, evenimente religioase, fotografii">
     
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://mitropolia-targovistei.ro/galerie.html">
+    <meta property="og:title" content="Galerie Foto | Mitropolia Târgoviștei">
+    <meta property="og:description" content="Galerie foto cu imagini din evenimentele Mitropoliei Târgoviștei">
+    <meta property="og:image" content="https://mitropolia-targovistei.ro/assets/img/og-gallery.jpg">
+    
+    <!-- Canonical -->
     <link rel="canonical" href="https://mitropolia-targovistei.ro/galerie.html">
     <link rel="alternate" hreflang="ro" href="https://mitropolia-targovistei.ro/galerie.html">
     <link rel="alternate" hreflang="en" href="https://mitropolia-targovistei.ro/en/galerie.html">
     
-    <meta property="og:type" content="website">
-    <meta property="og:title" content="Galerie Foto - Mitropolia Târgoviștei">
-    <meta property="og:url" content="https://mitropolia-targovistei.ro/galerie.html">
-    
+    <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/img/favicon-32x32.png">
+    
+    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700&family=Open+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
     
+    <!-- Stylesheets -->
     <link rel="stylesheet" href="/assets/css/base.css">
     <link rel="stylesheet" href="/assets/css/layout.css">
     <link rel="stylesheet" href="/assets/css/components.css">
     <link rel="stylesheet" href="/assets/css/themes.css">
-    <link rel="stylesheet" href="/assets/css/expandable.css">
-    
-    <script src="/assets/js/expandable.js" defer></script>
+    <link rel="stylesheet" href="/assets/css/gallery.css">
 </head>
 <body>
+    <!-- Header -->
     <header class="header" role="banner">
         <div class="container">
             <div class="header-content">
+                <!-- Logo -->
                 <div class="logo">
-                    <a href="/" aria-label="Mitropolia Târgoviștei - Acasă">
-                        <img src="/assets/img/logo.svg" alt="Mitropolia Târgoviștei" width="60" height="60">
+                    <a href="/">
+                        <img src="/assets/img/logo.svg" alt="Logo Mitropolia Târgoviștei" width="60" height="60">
                         <span class="logo-text" data-i18n="site.title">Mitropolia Târgoviștei</span>
                     </a>
                 </div>
-                
+
+                <!-- Navigation -->
                 <nav class="main-nav" role="navigation" aria-label="Navigare principală">
-                    <button class="menu-toggle" aria-label="Deschide meniu" aria-expanded="false" aria-controls="main-menu">
+                    <!-- Mobile Menu Toggle -->
+                    <button class="menu-toggle" aria-expanded="false" aria-controls="main-menu" aria-label="Meniu">
                         <span class="hamburger"></span>
                     </button>
-                    
+
+                    <!-- Navigation Menu -->
                     <ul class="nav-menu" id="main-menu">
                         <li><a href="/" data-i18n="nav.home">Acasă</a></li>
                         <li><a href="/despre.html" data-i18n="nav.about">Despre</a></li>
@@ -51,125 +66,41 @@
                         <li><a href="/parohii.html" data-i18n="nav.parishes">Parohii</a></li>
                         <li><a href="/galerie.html" class="active" data-i18n="nav.gallery">Galerie</a></li>
                         <li><a href="/contact.html" data-i18n="nav.contact">Contact</a></li>
+                        <li><a href="/doneaza.html" class="nav-donate" data-i18n="nav.donate">Donează</a></li>
                     </ul>
-                    
+
+                    <!-- Language Switcher -->
                     <div class="header-actions">
-                        <button class="lang-switch" aria-label="Schimbă limba" data-lang="en">
+                        <button class="lang-switch" aria-label="Schimbă limba">
                             <span class="lang-icon">🌐</span>
                             <span class="lang-text">EN</span>
                         </button>
-                        <a href="/doneaza.html" class="btn btn-primary btn-small" data-i18n="nav.donate">Donează</a>
                     </div>
                 </nav>
             </div>
         </div>
     </header>
 
-    <main id="main-content" role="main">
-        <nav class="breadcrumbs" aria-label="Breadcrumb">
+    <!-- Main Content -->
+    <main role="main">
+        <!-- Gallery Section - Direct, fără hero -->
+        <section class="section progressive-gallery progressive-gallery-full">
             <div class="container">
-                <ol itemscope itemtype="https://schema.org/BreadcrumbList">
-                    <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-                        <a itemprop="item" href="/"><span itemprop="name" data-i18n="nav.home">Acasă</span></a>
-                        <meta itemprop="position" content="1" />
-                    </li>
-                    <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-                        <span itemprop="name" data-i18n="nav.gallery">Galerie</span>
-                        <meta itemprop="position" content="2" />
-                    </li>
-                </ol>
-            </div>
-        </nav>
-
-        <section class="page-header">
-            <div class="container">
-                <h1 data-i18n="gallery.hero.title">Galerie Foto</h1>
-                <p class="page-subtitle" data-i18n="gallery.hero.subtitle">Momente din viața Mitropoliei</p>
-            </div>
-        </section>
-
-        <section class="section progressive-gallery">
-            <div class="container">
+                <!-- Gallery Grid -->
                 <div id="gallery-grid" class="gallery-grid" aria-live="polite" aria-atomic="false">
-                        <img src="/assets/img/gallery/mitropolie-logo.jpg" 
-                             alt="Catedrala Mitropoliei" 
-                             data-caption="Catedrala Mitropoliei Târgoviștei"
-                             loading="lazy">
-                    </div>
-                    <div class="gallery-item">
-                        <img src="/assets/img/gallery/mitropolie-logo.jpg" 
-                             alt="Slujbă arhierească" 
-                             data-caption="Slujbă arhierească în Catedrală"
-                             loading="lazy">
-                    </div>
-                    <div class="gallery-item">
-                        <img src="/assets/img/gallery/mitropolie-logo.jpg" 
-                             alt="Procesiune religioasă" 
-                             data-caption="Procesiune cu Sfintele Moaște"
-                             loading="lazy">
-                    </div>
-                    <div class="gallery-item">
-                        <img src="/assets/img/gallery/mitropolie-logo.jpg" 
-                             alt="Interior catedrală" 
-                             data-caption="Interior catedralei - fresce și iconostas"
-                             loading="lazy">
-                    </div>
-                    <div class="gallery-item">
-                        <img src="//assets/img/gallery/mitropolie-logo.jpg" 
-                             alt="Botez" 
-                             data-caption="Sfânta Taină a Botezului"
-                             loading="lazy">
-                    </div>
-                    <div class="gallery-item">
-                        <img src="/assets/img/gallery/mitropolie-logo.jpg" 
-                             alt="Cununie" 
-                             data-caption="Sfânta Taină a Cununiei"
-                             loading="lazy">
-                    </div>
-                    <div class="gallery-item">
-                        <img src="/assets/img/gallery/mitropolie-logo.jpg" 
-                             alt="Hirotonie" 
-                             data-caption="Hirotonie de preot"
-                             loading="lazy">
-                    </div>
-                    <div class="gallery-item">
-                        <img src="/assets/img/gallery/img8.jpg" 
-                             alt="Conferință teologică" 
-                             data-caption="Conferință teologică pentru tineret"
-                             loading="lazy">
-                    </div>
-                    <div class="gallery-item">
-                        <img src="/assets/img/gallery/img9.jpg" 
-                             alt="Activitate filantropică" 
-                             data-caption="Distribuire de ajutoare familiilor nevoiașe"
-                             loading="lazy">
-                    </div>
-                    <div class="gallery-item">
-                        <img src="/assets/img/gallery/img10.jpg" 
-                             alt="Pelerinaj" 
-                             data-caption="Pelerinaj la Mănăstirea Dealul"
-                             loading="lazy">
-                    </div>
-                    <div class="gallery-item">
-                        <img src="/assets/img/gallery/img11.jpg" 
-                             alt="Restaurare biserică" 
-                             data-caption="Lucrări de restaurare la biserica veche"
-                             loading="lazy">
-                    </div>
-                    <div class="gallery-item">
-                        <img src="/assets/img/gallery/img12.jpg" 
-                             alt="Cor bisericesc" 
-                             data-caption="Corul catedralei în timpul slujbei"
-                             loading="lazy">
-                    </div>
+                    <!-- Images will be loaded here dynamically -->
                 </div>
-           <button 
-                    id="gallery-more" 
-                    class="btn btn-primary gallery-more-btn" 
-                    aria-controls="gallery-grid" 
-                    aria-disabled="false">
-                    Arată mai mult
-                </button>
+                
+                <!-- Load More Button -->
+                <div class="gallery-controls">
+                    <button 
+                        id="gallery-more" 
+                        class="btn btn-primary gallery-more-btn" 
+                        aria-controls="gallery-grid" 
+                        aria-disabled="false">
+                        <span class="btn-text">Arată mai mult</span>
+                    </button>
+                </div>
             </div>
         </section>
     </main>
@@ -177,26 +108,52 @@
     <!-- Lightbox -->
     <div id="lightbox" class="lightbox" role="dialog" aria-modal="true" aria-label="Vizualizare imagine" style="display:none;">
         <div class="lightbox-overlay"></div>
-        <div class="lightbox-content">
-            <button class="lightbox-close" aria-label="Închide" title="Închide (Esc)">&times;</button>
-            <button class="lightbox-prev" aria-label="Imagine anterioară" title="Anterior (←)">‹</button>
-            <button class="lightbox-next" aria-label="Imagine următoare" title="Următor (→)">›</button>
-            <div class="lightbox-image-container">
-                <img id="lightbox-image" src="" alt="">
+        
+        <div class="lightbox-container">
+            <!-- Close Button -->
+            <button class="lightbox-close" aria-label="Închide">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <line x1="18" y1="6" x2="6" y2="18"></line>
+                    <line x1="6" y1="6" x2="18" y2="18"></line>
+                </svg>
+            </button>
+            
+            <!-- Previous Button -->
+            <button class="lightbox-prev" aria-label="Imaginea anterioară">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <polyline points="15 18 9 12 15 6"></polyline>
+                </svg>
+            </button>
+            
+            <!-- Image Container -->
+            <div class="lightbox-content">
+                <img id="lightbox-image" src="" alt="" class="lightbox-image">
+                <div class="lightbox-info">
+                    <p id="lightbox-caption" class="lightbox-caption"></p>
+                    <p id="lightbox-counter" class="lightbox-counter"></p>
+                </div>
             </div>
-            <div class="lightbox-caption" id="lightbox-caption"></div>
-            <div class="lightbox-counter" id="lightbox-counter"></div>
+            
+            <!-- Next Button -->
+            <button class="lightbox-next" aria-label="Imaginea următoare">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <polyline points="9 18 15 12 9 6"></polyline>
+                </svg>
+            </button>
         </div>
     </div>
 
+    <!-- Footer -->
     <footer class="footer" role="contentinfo">
         <div class="container">
             <div class="footer-content">
+                <!-- About Section -->
                 <div class="footer-section">
                     <h3 data-i18n="footer.about.title">Mitropolia Târgoviștei</h3>
                     <p data-i18n="footer.about.text">Mitropolia Târgoviștei servește comunitatea ortodoxă din județul Dâmbovița și regiunile învecinate, promovând valorile creștine și tradiția ortodoxă.</p>
                 </div>
-                
+
+                <!-- Quick Links -->
                 <div class="footer-section">
                     <h3 data-i18n="footer.links.title">Linkuri rapide</h3>
                     <ul class="footer-links">
@@ -206,37 +163,40 @@
                         <li><a href="/parohii.html" data-i18n="nav.parishes">Parohii</a></li>
                     </ul>
                 </div>
-                
+
+                <!-- Contact -->
                 <div class="footer-section">
                     <h3 data-i18n="footer.contact.title">Contact</h3>
                     <address class="footer-address">
                         <p>Str. Mitropolit Damaschin Coravu nr. 1<br>
                         Târgoviște, Dâmbovița 130018</p>
                         <p>Tel: <a href="tel:+40245123456">+40 245 123 456</a></p>
-                        <p>Email: <a href="mailto:contact@mitropolia-targovistei.ro">contact@mitropolia-targovistei.ro</a></p>
+                        <p>Email: <a href="mailto:cancelarie@mitropolia-targovistei.ro">cancelarie@mitropolia-targovistei.ro</a></p>
                     </address>
                 </div>
-                
+
+                <!-- Social Media -->
                 <div class="footer-section">
                     <h3 data-i18n="footer.social.title">Social Media</h3>
                     <div class="social-links">
-                        <a href="#" aria-label="Facebook" class="social-link">Facebook</a>
-                        <a href="#" aria-label="YouTube" class="social-link">YouTube</a>
-                        <a href="#" aria-label="Instagram" class="social-link">Instagram</a>
+                        <a href="https://facebook.com/mitropoliatargovistei" class="social-link" target="_blank" rel="noopener noreferrer">📘 Facebook</a>
+                        <a href="https://youtube.com/@mitropoliatargovistei" class="social-link" target="_blank" rel="noopener noreferrer">📹 YouTube</a>
+                        <a href="https://instagram.com/mitropoliatargovistei" class="social-link" target="_blank" rel="noopener noreferrer">📷 Instagram</a>
                     </div>
                 </div>
             </div>
-            
+
             <div class="footer-bottom">
-                <p>&copy; 2025 <span data-i18n="site.title">Mitropolia Târgoviștei</span>. <span data-i18n="footer.rights">Toate drepturile rezervate.</span></p>
+                <p>&copy; 2025 Mitropolia Târgoviștei. <span data-i18n="footer.rights">Toate drepturile rezervate.</span></p>
                 <p><a href="/politici.html" data-i18n="footer.privacy">Politică de confidențialitate</a></p>
             </div>
         </div>
     </footer>
 
-    <script src="/assets/js/i18n.js" defer></script>
-    <script src="/assets/js/seo.js" defer></script>
-    <script src="/assets/js/lightbox.js" defer></script>
-    <script src="/assets/js/main.js" defer></script>
+    <!-- Scripts - ACTUALIZAT cu noul nume -->
+    <script src="/assets/js/i18n.js"></script>
+    <script src="/assets/js/galerie.js"></script>
+    <script src="/assets/js/lightbox.js"></script>
+    <script src="/assets/js/main.js"></script>
 </body>
 </html>

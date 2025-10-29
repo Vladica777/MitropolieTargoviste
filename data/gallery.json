@@ -2,23 +2,21 @@
   {
     "src": "/assets/img/gallery/img1.jpg",
     "alt": "Catedrala Mitropoliei Târgoviștei",
-    "caption": "Catedrala Mitropoliei Târgoviștei",
+    "caption": "Catedrala Mitropoliei Târgoviștei - vedere exterioară",
     "width": 1200,
-    "height": 900,
-    "srcset": "/assets/img/gallery/img1-400.jpg 400w, /assets/img/gallery/img1-800.jpg 800w, /assets/img/gallery/img1.jpg 1200w",
-    "sizes": "(min-width: 1024px) 25vw, (min-width: 768px) 33vw, 50vw"
+    "height": 900
   },
   {
     "src": "/assets/img/gallery/img2.jpg",
     "alt": "Slujbă arhierească în Catedrală",
-    "caption": "Slujbă arhierească în Catedrală",
+    "caption": "Slujbă arhierească săvârșită de Înaltpreasfințitul Mitropolit",
     "width": 1200,
     "height": 900
   },
   {
     "src": "/assets/img/gallery/img3.jpg",
     "alt": "Procesiune religioasă",
-    "caption": "Procesiune cu Sfintele Moaște",
+    "caption": "Procesiune cu Sfintele Moaște prin oraș",
     "width": 1200,
     "height": 900
   },
@@ -32,21 +30,21 @@
   {
     "src": "/assets/img/gallery/img5.jpg",
     "alt": "Botez",
-    "caption": "Sfânta Taină a Botezului",
+    "caption": "Săvârșirea Sfintei Taine a Botezului",
     "width": 1200,
     "height": 900
   },
   {
     "src": "/assets/img/gallery/img6.jpg",
     "alt": "Cununie",
-    "caption": "Sfânta Taină a Cununiei",
+    "caption": "Slujba Cununiei religioase",
     "width": 1200,
     "height": 900
   },
   {
     "src": "/assets/img/gallery/img7.jpg",
     "alt": "Hirotonie",
-    "caption": "Hirotonie de preot",
+    "caption": "Hirotonie de preot în Catedrala Mitropoliei",
     "width": 1200,
     "height": 900
   },
@@ -74,7 +72,7 @@
   {
     "src": "/assets/img/gallery/img11.jpg",
     "alt": "Restaurare biserică",
-    "caption": "Lucrări de restaurare la biserica veche",
+    "caption": "Lucrări de restaurare la biserica veche din secolul XVII",
     "width": 1200,
     "height": 900
   },
@@ -88,14 +86,14 @@
   {
     "src": "/assets/img/gallery/img13.jpg",
     "alt": "Binecuvântare",
-    "caption": "Binecuvântarea credincioșilor",
+    "caption": "Binecuvântarea credincioșilor după Sfânta Liturghie",
     "width": 1200,
     "height": 900
   },
   {
     "src": "/assets/img/gallery/img14.jpg",
     "alt": "Învățământ religios",
-    "caption": "Ore de religie pentru copii",
+    "caption": "Ore de religie pentru copii în paraclisul eparhial",
     "width": 1200,
     "height": 900
   },
@@ -109,28 +107,28 @@
   {
     "src": "/assets/img/gallery/img16.jpg",
     "alt": "Mănăstire",
-    "caption": "Mănăstirea Viforâta",
+    "caption": "Mănăstirea Viforâta - vedere aeriana",
     "width": 1200,
     "height": 900
   },
   {
     "src": "/assets/img/gallery/img17.jpg",
     "alt": "Sfințire",
-    "caption": "Sfințirea unei noi biserici",
+    "caption": "Sfințirea unei noi biserici în eparhie",
     "width": 1200,
     "height": 900
   },
   {
     "src": "/assets/img/gallery/img18.jpg",
     "alt": "Adunare",
-    "caption": "Adunarea preoților din protopopiat",
+    "caption": "Adunarea anuală a preoților din protopopiat",
     "width": 1200,
     "height": 900
   },
   {
     "src": "/assets/img/gallery/img19.jpg",
-    "alt": "Pomeni",
-    "caption": "Slujba parastasului",
+    "alt": "Parastasul",
+    "caption": "Slujba parastasului pentru răposați",
     "width": 1200,
     "height": 900
   },
